@@ -37,3 +37,21 @@
 - GitHub Pages
 - обычного хостинга
 - дальнейшего переноса в Webflow/Tilda
+
+
+## Version 2 updates
+
+This version refocuses the landing page on the main buyer: second-home owners in Alicante / Costa Blanca who live abroad.
+
+Added sections:
+- Who it is for
+- Problems we solve
+- Photo report example
+- Key security
+- Clear scope: not a tourist rental agency
+
+Main offer:
+- Full Arrival Ready
+- Monthly Home Check
+- Key Holding
+- Arrival Box as an add-on / entry product
