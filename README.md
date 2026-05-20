@@ -65,3 +65,18 @@ Positioning:
 - Property care & arrival preparation for owners abroad
 - Key holding, monthly home checks, photo reports
 - Full Arrival Ready and Arrival Boxes as pre-arrival services
+
+
+## Version 4 updates
+
+Palette refreshed to the recommended **Luma** brand colors:
+
+- Background: `#FAF6EE`
+- Surface Alt: `#F1E8DC`
+- Text: `#172321`
+- Muted: `#6C7672`
+- Line: `#E7DED2`
+- Primary Accent: `#145C55`
+- Dark Accent: `#0E403B`
+- Sun Gold Accent: `#DFA550`
+- Terracotta Detail: `#C96F4A`
