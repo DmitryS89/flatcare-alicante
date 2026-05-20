@@ -80,3 +80,13 @@ Palette refreshed to the recommended **Luma** brand colors:
 - Dark Accent: `#0E403B`
 - Sun Gold Accent: `#DFA550`
 - Terracotta Detail: `#C96F4A`
+
+
+## Version 5 updates
+
+Final refinement pass:
+- Added premium multilingual typography via **Manrope**
+- Improved heading scale, spacing and readability
+- Refined buttons, cards, report blocks and forms
+- Added hover states, underline interactions and softer shadows
+- Tuned header, hero, badges and micro-details to match the Luma palette
