@@ -1,6 +1,6 @@
-# FlatCare Alicante — MVP Landing Page
+# Luma Alicante — MVP Landing Page
 
-Готовый статический сайт для запуска FlatCare + Arrival Boxes в Аликанте.
+Готовый статический сайт для запуска Luma: Property Care + Arrival Boxes в Аликанте.
 
 ## Файлы
 
@@ -17,7 +17,7 @@
    Пример:
    `const WHATSAPP_NUMBER = "34600111222";`
 
-2. При желании заменить название `FlatCare Alicante` на финальное название бренда.
+2. При желании заменить название `Luma Alicante` на финальное название бренда.
 
 3. Проверить стартовые цены:
    - Arrival Box — от €39 + чек
@@ -55,3 +55,13 @@ Main offer:
 - Monthly Home Check
 - Key Holding
 - Arrival Box as an add-on / entry product
+
+
+## Version 3 updates
+
+Brand renamed to **Luma Alicante**.
+
+Positioning:
+- Property care & arrival preparation for owners abroad
+- Key holding, monthly home checks, photo reports
+- Full Arrival Ready and Arrival Boxes as pre-arrival services

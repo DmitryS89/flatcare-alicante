@@ -13,7 +13,7 @@ const translations = {
     "hero.title": "Own an apartment in Alicante but live abroad?",
     "hero.subtitle": "We keep the keys, check your home, prepare it before you arrive and send clear photo reports.",
     "hero.primary": "Prepare my apartment",
-    "hero.secondary": "See FlatCare plans",
+    "hero.secondary": "See care plans",
     "hero.trust1.title": "Photo reports",
     "hero.trust1.text": "after each visit",
     "hero.trust2.title": "No warehouse",
@@ -32,7 +32,7 @@ const translations = {
     "problem.title": "Your home in Alicante needs someone local while you are away.",
     "problem.text": "Leaks, humidity, locked windows, broken Wi‑Fi, missing keys or an empty fridge can ruin the first day. We check, prepare and document the apartment before you arrive.",
     "services.eyebrow": "What we do",
-    "services.title": "FlatCare services",
+    "services.title": "Luma services",
     "services.subtitle": "Start with Full Arrival Ready, Home Check or Key Holding, then add Arrival Box when needed.",
     "services.key.title": "Key holding",
     "services.key.text": "Secure key custody, controlled access for approved visits and a clear access log.",
@@ -220,7 +220,7 @@ const translations = {
     "problem.title": "Вашей квартире в Аликанте нужен человек на месте, пока вас нет.",
     "problem.text": "Протечки, влажность, закрытые окна, неработающий Wi‑Fi, потерянные ключи или пустой холодильник могут испортить первый день. Мы проверяем, готовим и документируем квартиру до вашего приезда.",
     "services.eyebrow": "Что мы делаем",
-    "services.title": "Услуги FlatCare",
+    "services.title": "Услуги Luma",
     "services.subtitle": "Начните с Full Arrival Ready, Home Check или Key Holding, а Arrival Box добавляйте по необходимости.",
     "services.key.title": "Хранение ключей",
     "services.key.text": "Безопасное хранение ключей, доступ по согласованию и понятный журнал визитов.",
@@ -389,7 +389,7 @@ const translations = {
     "hero.title": "¿Tienes una vivienda en Alicante y vives fuera?",
     "hero.subtitle": "Custodiamos las llaves, revisamos la vivienda, la preparamos antes de tu llegada y enviamos informes con fotos.",
     "hero.primary": "Preparar mi vivienda",
-    "hero.secondary": "Ver planes FlatCare",
+    "hero.secondary": "Ver planes",
     "hero.trust1.title": "Informes con fotos",
     "hero.trust1.text": "después de cada visita",
     "hero.trust2.title": "Sin almacén",
@@ -408,7 +408,7 @@ const translations = {
     "problem.title": "Tu vivienda en Alicante necesita a alguien local mientras estás fuera.",
     "problem.text": "Fugas, humedad, ventanas cerradas, Wi‑Fi roto, llaves perdidas o una nevera vacía pueden arruinar el primer día. Revisamos, preparamos y documentamos la vivienda antes de tu llegada.",
     "services.eyebrow": "Qué hacemos",
-    "services.title": "Servicios FlatCare",
+    "services.title": "Servicios Luma",
     "services.subtitle": "Empieza con Full Arrival Ready, Home Check o Key Holding, y añade Arrival Box cuando lo necesites.",
     "services.key.title": "Custodia de llaves",
     "services.key.text": "Custodia segura, acceso controlado para visitas autorizadas y registro claro de accesos.",
@@ -710,9 +710,9 @@ function selectedItems(){
 function requestText(){
   const selected = selectedItems();
   const langIntro = {
-    en: "Hello! I would like to request FlatCare Alicante service.",
-    ru: "Здравствуйте! Хочу оставить заявку на услугу FlatCare Alicante.",
-    es: "Hola. Me gustaría solicitar un servicio de FlatCare Alicante."
+    en: "Hello! I would like to request Luma Alicante service.",
+    ru: "Здравствуйте! Хочу оставить заявку на услугу Luma Alicante.",
+    es: "Hola. Me gustaría solicitar un servicio de Luma Alicante."
   }[currentLang];
   const itemsText = selected.length ? selected.map(x => `- ${x}`).join("\n") : "- no Arrival Box items selected yet";
   return `${langIntro}\n\nArrival Box / preparation items:\n${itemsText}\n\nPlease contact me to confirm details, address, access and final quote.`;
@@ -783,7 +783,7 @@ function initLeadForm(){
     const message = document.getElementById("message").value.trim();
 
     const text = [
-      "Hello! I would like to request FlatCare Alicante service.",
+      "Hello! I would like to request Luma Alicante service.",
       name ? `Name: ${name}` : "",
       area ? `Area: ${area}` : "",
       date ? `Arrival date: ${date}` : "",
