@@ -90,3 +90,20 @@ Final refinement pass:
 - Refined buttons, cards, report blocks and forms
 - Added hover states, underline interactions and softer shadows
 - Tuned header, hero, badges and micro-details to match the Luma palette
+
+
+## Version 6 updates
+
+Final Luma logo integration:
+- Added custom SVG logo mark based on the chosen arched-door concept
+- Added horizontal and stacked logo SVG assets
+- Replaced favicon with the final Luma symbol
+- Replaced header icon with the final logo mark
+- Added logo lockup inside the hero card
+
+Logo assets:
+- `assets/luma-mark.svg`
+- `assets/luma-mark-reversed.svg`
+- `assets/luma-logo-horizontal.svg`
+- `assets/luma-logo-stacked.svg`
+- `assets/favicon.svg`

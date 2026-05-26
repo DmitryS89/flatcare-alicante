@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-labelledby="title desc">
+  <title id="title">Luma Alicante horizontal logo</title>
+  <desc id="desc">Horizontal logo for Luma Alicante with arch and open door symbol.</desc>
+  <g transform="translate(10,0) scale(.82)">
+    <circle cx="58" cy="34" r="9.5" fill="#DFA550"/>
+    <path d="M60 125 V72 C60 41 120 41 120 72 V125" fill="none" stroke="#145C55" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M88 66 L112 78 V126 L88 116 Z" fill="#0E403B" stroke="#0E403B" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M96 95 V105" stroke="#DFA550" stroke-width="4" stroke-linecap="round"/>
+    <path d="M78 128 H104M72 135 H111M66 142 H119M58 150 H129" stroke="#DFA550" stroke-width="2.3" stroke-linecap="round"/>
+  </g>
+  <line x1="160" y1="35" x2="160" y2="125" stroke="#DFA550" stroke-width="1.2"/>
+  <text x="190" y="83" fill="#145C55" font-family="Georgia, 'Times New Roman', serif" font-size="62" letter-spacing="3">Luma</text>
+  <line x1="190" y1="112" x2="235" y2="112" stroke="#DFA550" stroke-width="1"/>
+  <text x="252" y="119" fill="#DFA550" font-family="Manrope, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="13">ALICANTE</text>
+  <line x1="460" y1="112" x2="515" y2="112" stroke="#DFA550" stroke-width="1"/>
+</svg>
