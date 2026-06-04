@@ -175,3 +175,11 @@ Calculator fix:
 - Town / area surcharge is now added invisibly to the total.
 - The surcharge appears in selected items as “Area surcharge: Town”.
 - Breakdown now shows the main selected service and all paid add-ons.
+
+
+## Version 12 updates
+
+Calculator bug fix:
+- Fixed JavaScript syntax error in WhatsApp estimate text generation.
+- Calculator now initializes and updates service fee, grocery total and selected items correctly.
+- Added an extra calculator refresh after default Arrival Box preset setup.

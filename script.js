@@ -799,32 +799,16 @@ function calculatorRequestText(){
     : "Hello! I would like to request this Luma Alicante estimate.";
 
   const selected = data.lines.length
-    ? data.lines.map(x => `- ${x.name}: ${money(x.price)}`).join("
-")
+    ? data.lines.map(x => `- ${x.name}: ${money(x.price)}`).join("\n")
     : "- no services selected";
 
   const groceryLine = data.groceryValue
-    ? `
-Estimated grocery receipt: ${money(data.groceryValue)}`
+    ? `\nEstimated grocery receipt: ${money(data.groceryValue)}`
     : "";
 
-  const totalLine = `Service fee estimate: ${money(data.serviceFee)}${groceryLine ? `
-Service + grocery budget: ${money(data.serviceFee + data.groceryValue)}` : ""}`;
+  const totalLine = `Service fee estimate: ${money(data.serviceFee)}${groceryLine ? `\nService + grocery budget: ${money(data.serviceFee + data.groceryValue)}` : ""}`;
 
-  return `${intro}
-
-Area: ${area}
-Town / urbanisation: ${town}
-Keys/access: ${keys}
-Timing: ${timing}
-Property size: ${property}
-
-Selected services:
-${selected}
-
-${totalLine}
-
-Please contact me to confirm address, access, timing and final quote.`;
+  return `${intro}\n\nArea: ${area}\nTown / urbanisation: ${town}\nKeys/access: ${keys}\nTiming: ${timing}\nProperty size: ${property}\n\nSelected services:\n${selected}\n\n${totalLine}\n\nPlease contact me to confirm address, access, timing and final quote.`;
 }
 
 function updateCalculator(){
@@ -880,4 +864,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initLeadForm();
   initCalculator();
   setPreset("basic");
+  updateCalculator();
 });
