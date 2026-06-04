@@ -706,6 +706,7 @@ function initLeadForm(){
 
 
 function calcSelectedText(selectEl){
+  if(!selectEl) return "";
   const opt = selectEl.options[selectEl.selectedIndex];
   return opt ? opt.textContent.trim() : "";
 }
@@ -714,42 +715,75 @@ function money(n){
   return `€${Number(n || 0).toLocaleString("en-US")}`;
 }
 
-function addSelectLine(lines, selectId, fallbackName){
+function calcLabelForSelect(selectId, text, value){
+  if(!value) return text;
+
+  const labels = {
+    calcArea: currentLang === "es" ? "Zona especial" : "Other area",
+    calcTown: currentLang === "es" ? "Suplemento de zona" : "Area surcharge",
+    calcKeys: currentLang === "es" ? "Llaves / acceso" : "Keys / access",
+    calcProperty: currentLang === "es" ? "Tamaño de vivienda" : "Property size",
+    calcTiming: currentLang === "es" ? "Horario" : "Timing",
+    calcWaiting: currentLang === "es" ? "Tiempo de espera" : "Waiting time",
+    calcArrivalBox: currentLang === "es" ? "Arrival Box" : "Arrival Box",
+    calcReport: currentLang === "es" ? "Informe" : "Report"
+  };
+
+  if(selectId === "calcTown"){
+    return `${labels.calcTown}: ${text}`;
+  }
+
+  return text || labels[selectId] || selectId;
+}
+
+function addSelectLine(lines, selectId){
   const el = document.getElementById(selectId);
   if(!el) return 0;
+
   const value = Number(el.value || 0);
   const text = calcSelectedText(el);
+
   if(value){
-    lines.push({name: text || fallbackName, price: value});
+    lines.push({
+      name: calcLabelForSelect(selectId, text, value),
+      price: value
+    });
   }
+
   return value;
 }
 
 function calculatorData(){
   const main = document.querySelector('input[name="mainService"]:checked');
   const grocery = document.getElementById("calcGrocery");
-
   const lines = [];
   let serviceFee = 0;
 
   if(main){
-    const value = Number(main.value);
+    const value = Number(main.value || 0);
     serviceFee += value;
-    lines.push({name: main.dataset.serviceName || "Main service", price: value});
+    lines.push({
+      name: main.dataset.serviceName || "Main service",
+      price: value
+    });
   }
 
   ["calcArea", "calcTown", "calcKeys", "calcProperty", "calcTiming", "calcWaiting", "calcArrivalBox", "calcReport"].forEach(id => {
-    serviceFee += addSelectLine(lines, id, id);
+    serviceFee += addSelectLine(lines, id);
   });
 
   document.querySelectorAll(".calcAddon:checked").forEach(addon => {
     const value = Number(addon.value || 0);
     serviceFee += value;
-    lines.push({name: addon.dataset.addonName || addon.closest("label").textContent.trim(), price: value});
+    lines.push({
+      name: addon.dataset.addonName || addon.closest("label").textContent.trim(),
+      price: value
+    });
   });
 
   const groceryValue = Math.max(0, Number(grocery?.value || 0));
-  return {serviceFee, groceryValue, lines};
+
+  return { serviceFee, groceryValue, lines };
 }
 
 function calculatorRequestText(){
@@ -805,11 +839,13 @@ function updateCalculator(){
 
   const breakdown = document.getElementById("calcBreakdown");
   breakdown.innerHTML = "";
+
   data.lines.forEach(line => {
     const li = document.createElement("li");
     li.innerHTML = `<span>${line.name}</span><strong>${money(line.price)}</strong>`;
     breakdown.appendChild(li);
   });
+
   if(data.groceryValue){
     const li = document.createElement("li");
     li.innerHTML = `<span>${currentLang === "es" ? "Compra estimada" : "Estimated grocery receipt"}</span><strong>${money(data.groceryValue)}</strong>`;
@@ -817,16 +853,20 @@ function updateCalculator(){
   }
 
   const wa = document.getElementById("calculatorWhatsapp");
-  wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(calculatorRequestText())}`;
+  if(wa){
+    wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(calculatorRequestText())}`;
+  }
 }
 
 function initCalculator(){
   const calc = document.getElementById("calculator");
   if(!calc) return;
+
   calc.querySelectorAll("input, select").forEach(el => {
     el.addEventListener("change", updateCalculator);
     el.addEventListener("input", updateCalculator);
   });
+
   updateCalculator();
 }
 

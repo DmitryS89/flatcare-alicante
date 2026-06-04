@@ -166,3 +166,12 @@ Calculator expanded:
 - Added report type
 - Added cleaning inspection add-on
 - WhatsApp request now includes area, town, access, timing, property size and selected estimate
+
+
+## Version 11 updates
+
+Calculator fix:
+- Town names no longer show visible “+€” in the dropdown.
+- Town / area surcharge is now added invisibly to the total.
+- The surcharge appears in selected items as “Area surcharge: Town”.
+- Breakdown now shows the main selected service and all paid add-ons.
