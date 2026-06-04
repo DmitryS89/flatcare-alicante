@@ -1,14 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" role="img" aria-labelledby="title desc">
-  <title id="title">Luma Alicante stacked logo</title>
-  <desc id="desc">Luma Alicante stacked logo with arched doorway mark.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" role="img" aria-label="Luma Alicante">
   <g transform="translate(260,0)">
-    <circle cx="58" cy="31" r="9.2" fill="#DFA550"/>
-    <path d="M58 126 V72 C58 39 122 39 122 72 V126" fill="none" stroke="#145C55" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M88 67 L113 79 V127 L88 116 Z" fill="#0E403B" stroke="#0E403B" stroke-width="1.4" stroke-linejoin="round"/>
-    <path d="M96 94.5 V104" stroke="#DFA550" stroke-width="4" stroke-linecap="round"/>
-    <path d="M76 128 H106M70 136 H113M64 144 H121M56 153 H131" stroke="#DFA550" stroke-width="2.5" stroke-linecap="round"/>
-</g>
-  <text x="350" y="302" text-anchor="middle" fill="#145C55" font-family="Georgia, 'Times New Roman', serif" font-size="138" letter-spacing="8">Luma</text>
+    <circle cx="58" cy="31" r="8.2" fill="#DFA550"/>
+    <path d="M60 124 V73 C60 42 120 42 120 73 V124" fill="none" stroke="#145C55" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M89 68 L112 79 V126 L89 116 Z" fill="#0E403B" stroke="#0E403B" stroke-width="1.1" stroke-linejoin="round"/>
+    <path d="M96 95 V103" stroke="#DFA550" stroke-width="3.1" stroke-linecap="round"/>
+    <path d="M77 128 H105M71 136 H113M65 144 H121M57 152 H130" stroke="#DFA550" stroke-width="1.9" stroke-linecap="round"/>
+  </g>
+  <text x="350" y="300" text-anchor="middle" fill="#145C55" font-family="Georgia, 'Times New Roman', serif" font-size="138" letter-spacing="8">Luma</text>
   <line x1="145" y1="365" x2="235" y2="365" stroke="#DFA550" stroke-width="2"/>
   <text x="350" y="383" text-anchor="middle" fill="#DFA550" font-family="Manrope, Arial, sans-serif" font-size="33" font-weight="600" letter-spacing="24">ALICANTE</text>
   <line x1="465" y1="365" x2="555" y2="365" stroke="#DFA550" stroke-width="2"/>

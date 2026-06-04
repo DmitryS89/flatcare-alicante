@@ -1104,3 +1104,43 @@ textarea::placeholder{
 .brand-mark-logo img{object-fit:cover; transform:scale(1.02);}
 .hero-logo-lockup img{max-height:170px;}
 @media (max-width: 640px){.hero-logo-lockup img{max-height:145px;}}
+
+
+/* Logo placement fix: light header mark, no large centered logo in hero card */
+.brand-mark-logo{
+  width:42px;
+  height:42px;
+  padding:0;
+  background:transparent !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  overflow:visible;
+}
+
+.brand-mark-logo:after{
+  display:none !important;
+}
+
+.brand-mark-logo img{
+  width:42px;
+  height:42px;
+  display:block;
+  object-fit:contain !important;
+  transform:none !important;
+}
+
+.hero-logo-lockup{
+  display:none !important;
+}
+
+.hero-card .card-topline{
+  margin-top:0;
+}
+
+@media (max-width: 640px){
+  .brand-mark-logo,
+  .brand-mark-logo img{
+    width:38px;
+    height:38px;
+  }
+}

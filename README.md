@@ -124,3 +124,13 @@ Recommended Vercel setup:
 Before launch:
 - Replace `WHATSAPP_NUMBER` in `script.js` with the real number.
 - Deploy to production.
+
+
+## Version 7 updates
+
+Logo integration fix:
+- Removed the large centered logo from the hero card
+- Added a lighter transparent header mark
+- Reduced visual stroke weight in the header mark
+- Kept the dark rounded favicon/app icon separately
+- Fixed logo scaling so it does not look too heavy on the website
