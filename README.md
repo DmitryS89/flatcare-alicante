@@ -134,3 +134,12 @@ Logo integration fix:
 - Reduced visual stroke weight in the header mark
 - Kept the dark rounded favicon/app icon separately
 - Fixed logo scaling so it does not look too heavy on the website
+
+
+## Version 8 updates
+
+Language strategy updated for launch:
+- Removed Russian language selector from the website
+- Website now works only in English and Spanish
+- Old `ru` localStorage selection is automatically reset to English
+- Arrival Box item labels now use EN/ES only
