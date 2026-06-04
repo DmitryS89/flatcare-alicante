@@ -399,16 +399,70 @@
         <div class="calculator-grid">
           <div class="calculator-panel">
             <div class="calc-group">
-              <h3 data-i18n="calc.location.title">1. Area / hub</h3>
-              <label class="calc-field">
-                <span data-i18n="calc.location.label">Service area</span>
-                <select id="calcArea">
-                  <option value="0" data-i18n="calc.area.alicante">Alicante hub</option>
-                  <option value="0" data-i18n="calc.area.benidorm">Benidorm hub</option>
-                  <option value="0" data-i18n="calc.area.south">South Costa Blanca hub</option>
-                  <option value="35" data-i18n="calc.area.outside">Outside hub / by request</option>
-                </select>
-              </label>
+              <h3 data-i18n="calc.location.title">1. Area and town</h3>
+
+              <div class="calc-row">
+                <label class="calc-field">
+                  <span data-i18n="calc.location.label">Service hub</span>
+                  <select id="calcArea">
+                    <option value="0" data-i18n="calc.area.alicante">Alicante area</option>
+                    <option value="0" data-i18n="calc.area.benidorm">Benidorm area</option>
+                    <option value="0" data-i18n="calc.area.south">South Costa Blanca area</option>
+                    <option value="35" data-i18n="calc.area.outside">Other area / by request</option>
+                  </select>
+                </label>
+
+                <label class="calc-field">
+                  <span data-i18n="calc.town.label">Town / urbanisation</span>
+                  <select id="calcTown">
+                    <optgroup label="Alicante core">
+                      <option value="0">Alicante Centro</option>
+                      <option value="0">Playa San Juan</option>
+                      <option value="0">Cabo de las Huertas</option>
+                      <option value="0">Albufereta</option>
+                      <option value="0">San Juan de Alicante</option>
+                      <option value="0">El Campello</option>
+                    </optgroup>
+                    <optgroup label="Alicante extended">
+                      <option value="20">Mutxamel +€20</option>
+                      <option value="20">San Vicente del Raspeig +€20</option>
+                      <option value="20">Urbanova +€20</option>
+                      <option value="20">El Altet +€20</option>
+                      <option value="25">Arenales del Sol +€25</option>
+                      <option value="25">Gran Alacant +€25</option>
+                      <option value="30">Santa Pola +€30</option>
+                    </optgroup>
+                    <optgroup label="Benidorm core">
+                      <option value="0">Benidorm</option>
+                      <option value="0">Cala de Finestrat</option>
+                      <option value="0">Finestrat</option>
+                      <option value="0">Villajoyosa / La Vila Joiosa</option>
+                    </optgroup>
+                    <optgroup label="Benidorm extended">
+                      <option value="20">Albir +€20</option>
+                      <option value="20">L'Alfàs del Pi +€20</option>
+                      <option value="25">La Nucía +€25</option>
+                      <option value="25">Polop +€25</option>
+                      <option value="30">Altea +€30</option>
+                      <option value="35">Altea la Vella +€35</option>
+                    </optgroup>
+                    <optgroup label="South Costa Blanca">
+                      <option value="0">Torrevieja</option>
+                      <option value="0">Orihuela Costa</option>
+                      <option value="0">Punta Prima</option>
+                      <option value="0">La Zenia</option>
+                      <option value="0">Cabo Roig</option>
+                      <option value="0">Campoamor</option>
+                      <option value="0">Villamartin</option>
+                      <option value="20">Guardamar del Segura +€20</option>
+                      <option value="20">Ciudad Quesada +€20</option>
+                      <option value="20">Rojales +€20</option>
+                      <option value="25">Los Montesinos +€25</option>
+                    </optgroup>
+                  </select>
+                </label>
+              </div>
+
               <p class="calc-hint" data-i18n="calc.location.hint">Hub pricing assumes scheduled route days. Specific urgent dates may change the quote.</p>
             </div>
 
@@ -424,51 +478,93 @@
             </div>
 
             <div class="calc-group">
-              <h3 data-i18n="calc.addons.title">3. Add-ons</h3>
-              <div class="calc-options">
-                <label><input type="checkbox" class="calcAddon" value="69" data-addon-name="Arrival Box shopping service"> <span data-i18n="calc.addon.arrival">Arrival Box shopping service +€69</span></label>
-                <label><input type="checkbox" class="calcAddon" value="149" data-addon-name="Annual key holding"> <span data-i18n="calc.addon.key">Annual key holding +€149/year</span></label>
-                <label><input type="checkbox" class="calcAddon" value="25" data-addon-name="Make beds before arrival"> <span data-i18n="calc.addon.beds">Make beds before arrival +€25</span></label>
-                <label><input type="checkbox" class="calcAddon" value="20" data-addon-name="Cleaning coordination"> <span data-i18n="calc.addon.cleaning">Cleaning coordination +€20</span></label>
+              <h3 data-i18n="calc.access.title">3. Keys and access</h3>
+              <div class="calc-row">
+                <label class="calc-field">
+                  <span data-i18n="calc.access.label">Keys / access situation</span>
+                  <select id="calcKeys">
+                    <option value="0" data-i18n="calc.access.hold">Luma already holds the keys +€0</option>
+                    <option value="10" data-i18n="calc.access.neighbour">Keys with neighbour / concierge +€10</option>
+                    <option value="25" data-i18n="calc.access.collect">Key collection required +€25</option>
+                    <option value="35" data-i18n="calc.access.handover">First key handover / setup +€35</option>
+                  </select>
+                </label>
+
+                <label class="calc-field">
+                  <span data-i18n="calc.property.label">Property size</span>
+                  <select id="calcProperty">
+                    <option value="0" data-i18n="calc.property.studio">Studio / 1 bedroom +€0</option>
+                    <option value="10" data-i18n="calc.property.two">2 bedrooms +€10</option>
+                    <option value="20" data-i18n="calc.property.three">3 bedrooms +€20</option>
+                    <option value="35" data-i18n="calc.property.villa">Villa / large house +€35</option>
+                  </select>
+                </label>
               </div>
             </div>
 
-            <div class="calc-row">
-              <label class="calc-field">
-                <span data-i18n="calc.timing.label">Timing</span>
-                <select id="calcTiming">
-                  <option value="0" data-i18n="calc.timing.route">Scheduled route day +€0</option>
-                  <option value="20" data-i18n="calc.timing.specific">Specific requested day +€20</option>
-                  <option value="50" data-i18n="calc.timing.urgent">Urgent / same-day +€50</option>
-                  <option value="30" data-i18n="calc.timing.weekend">Evening / weekend +€30</option>
-                </select>
-              </label>
+            <div class="calc-group">
+              <h3 data-i18n="calc.timing.title">4. Timing and waiting</h3>
+              <div class="calc-row">
+                <label class="calc-field">
+                  <span data-i18n="calc.timing.label">Timing</span>
+                  <select id="calcTiming">
+                    <option value="0" data-i18n="calc.timing.route">Scheduled route day +€0</option>
+                    <option value="20" data-i18n="calc.timing.specific">Specific requested day +€20</option>
+                    <option value="50" data-i18n="calc.timing.urgent">Urgent / same-day +€50</option>
+                    <option value="30" data-i18n="calc.timing.weekend">Evening / weekend +€30</option>
+                  </select>
+                </label>
 
-              <label class="calc-field">
-                <span data-i18n="calc.property.label">Property type</span>
-                <select id="calcProperty">
-                  <option value="0" data-i18n="calc.property.apartment">Apartment / studio +€0</option>
-                  <option value="20" data-i18n="calc.property.townhouse">Townhouse / large apartment +€20</option>
-                  <option value="35" data-i18n="calc.property.villa">Villa / complex access +€35</option>
-                </select>
-              </label>
+                <label class="calc-field">
+                  <span data-i18n="calc.waiting.label">Extra waiting time</span>
+                  <select id="calcWaiting">
+                    <option value="0" data-i18n="calc.waiting.none">No waiting +€0</option>
+                    <option value="30" data-i18n="calc.waiting.one">Up to 1 extra hour +€30</option>
+                    <option value="60" data-i18n="calc.waiting.two">Up to 2 extra hours +€60</option>
+                    <option value="90" data-i18n="calc.waiting.three">Up to 3 extra hours +€90</option>
+                  </select>
+                </label>
+              </div>
             </div>
 
-            <div class="calc-row">
-              <label class="calc-field">
-                <span data-i18n="calc.waiting.label">Extra waiting time</span>
-                <select id="calcWaiting">
-                  <option value="0" data-i18n="calc.waiting.none">No waiting +€0</option>
-                  <option value="30" data-i18n="calc.waiting.one">Up to 1 extra hour +€30</option>
-                  <option value="60" data-i18n="calc.waiting.two">Up to 2 extra hours +€60</option>
-                  <option value="90" data-i18n="calc.waiting.three">Up to 3 extra hours +€90</option>
-                </select>
-              </label>
+            <div class="calc-group">
+              <h3 data-i18n="calc.arrivalbox.title">5. Arrival Box and report</h3>
+              <div class="calc-row">
+                <label class="calc-field">
+                  <span data-i18n="calc.arrivalbox.label">Arrival Box level</span>
+                  <select id="calcArrivalBox">
+                    <option value="0" data-i18n="calc.arrivalbox.none">No Arrival Box +€0</option>
+                    <option value="69" data-i18n="calc.arrivalbox.basic">Basic shopping service +€69</option>
+                    <option value="89" data-i18n="calc.arrivalbox.family">Family shopping service +€89</option>
+                    <option value="99" data-i18n="calc.arrivalbox.baby">Baby / special items +€99</option>
+                    <option value="119" data-i18n="calc.arrivalbox.longstay">Long-stay starter +€119</option>
+                  </select>
+                </label>
 
-              <label class="calc-field">
+                <label class="calc-field">
+                  <span data-i18n="calc.report.label">Report type</span>
+                  <select id="calcReport">
+                    <option value="0" data-i18n="calc.report.basic">Basic WhatsApp photo update included</option>
+                    <option value="15" data-i18n="calc.report.pdf">Detailed PDF report +€15</option>
+                    <option value="20" data-i18n="calc.report.video">Video walkthrough +€20</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="calc-field calc-grocery-field">
                 <span data-i18n="calc.grocery.label">Estimated grocery receipt</span>
                 <input id="calcGrocery" type="number" min="0" max="1000" step="10" value="0" />
               </label>
+            </div>
+
+            <div class="calc-group calc-group-last">
+              <h3 data-i18n="calc.addons.title">6. Extra options</h3>
+              <div class="calc-options">
+                <label><input type="checkbox" class="calcAddon" value="149" data-addon-name="Annual key holding"> <span data-i18n="calc.addon.key">Annual key holding +€149/year</span></label>
+                <label><input type="checkbox" class="calcAddon" value="25" data-addon-name="Make beds before arrival"> <span data-i18n="calc.addon.beds">Make beds before arrival +€25</span></label>
+                <label><input type="checkbox" class="calcAddon" value="20" data-addon-name="Cleaning coordination"> <span data-i18n="calc.addon.cleaning">Cleaning coordination +€20</span></label>
+                <label><input type="checkbox" class="calcAddon" value="25" data-addon-name="Cleaning inspection after cleaner"> <span data-i18n="calc.addon.cleaningCheck">Cleaning inspection after cleaner +€25</span></label>
+              </div>
             </div>
           </div>
 

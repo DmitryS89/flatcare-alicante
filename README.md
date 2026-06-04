@@ -154,3 +154,15 @@ Added Service Calculator / Estimate Builder:
 - Indicative service fee and service + grocery budget
 - WhatsApp request link with selected estimate
 - Added Exterior Check as entry-level no-key service
+
+
+## Version 10 updates
+
+Calculator expanded:
+- Added town / urbanisation list for Alicante, Benidorm and South Costa Blanca
+- Added keys/access situation
+- Added property size
+- Added Arrival Box levels
+- Added report type
+- Added cleaning inspection add-on
+- WhatsApp request now includes area, town, access, timing, property size and selected estimate

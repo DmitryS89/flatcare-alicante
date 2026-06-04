@@ -90,6 +90,39 @@ const translations = {
     "prices.plans.li1": "key holding",
     "prices.plans.li2": "scheduled checks",
     "prices.plans.li3": "preferred extra visit rates",
+    
+    "calc.location.title": "1. Area and town",
+    "calc.location.label": "Service hub",
+    "calc.area.alicante": "Alicante area",
+    "calc.area.benidorm": "Benidorm area",
+    "calc.area.south": "South Costa Blanca area",
+    "calc.area.outside": "Other area / by request",
+    "calc.town.label": "Town / urbanisation",
+    "calc.access.title": "3. Keys and access",
+    "calc.access.label": "Keys / access situation",
+    "calc.access.hold": "Luma already holds the keys +€0",
+    "calc.access.neighbour": "Keys with neighbour / concierge +€10",
+    "calc.access.collect": "Key collection required +€25",
+    "calc.access.handover": "First key handover / setup +€35",
+    "calc.property.label": "Property size",
+    "calc.property.studio": "Studio / 1 bedroom +€0",
+    "calc.property.two": "2 bedrooms +€10",
+    "calc.property.three": "3 bedrooms +€20",
+    "calc.property.villa": "Villa / large house +€35",
+    "calc.timing.title": "4. Timing and waiting",
+    "calc.arrivalbox.title": "5. Arrival Box and report",
+    "calc.arrivalbox.label": "Arrival Box level",
+    "calc.arrivalbox.none": "No Arrival Box +€0",
+    "calc.arrivalbox.basic": "Basic shopping service +€69",
+    "calc.arrivalbox.family": "Family shopping service +€89",
+    "calc.arrivalbox.baby": "Baby / special items +€99",
+    "calc.arrivalbox.longstay": "Long-stay starter +€119",
+    "calc.report.label": "Report type",
+    "calc.report.basic": "Basic WhatsApp photo update included",
+    "calc.report.pdf": "Detailed PDF report +€15",
+    "calc.report.video": "Video walkthrough +€20",
+    "calc.addons.title": "6. Extra options",
+    "calc.addon.cleaningCheck": "Cleaning inspection after cleaner +€25",
     "calc.eyebrow": "Service calculator",
     "calc.title": "Build your estimate",
     "calc.subtitle": "Select the services you need and get an indicative service fee before requesting a final quote.",
@@ -117,8 +150,8 @@ const translations = {
     "calc.timing.urgent": "Urgent / same-day +€50",
     "calc.timing.weekend": "Evening / weekend +€30",
     "calc.property.label": "Property type",
-    "calc.property.apartment": "Apartment / studio +€0",
-    "calc.property.townhouse": "Townhouse / large apartment +€20",
+    "calc.property.apartment": "Studio / 1 bedroom +€0",
+    "calc.property.townhouse": "2–3 bedrooms +€20",
     "calc.property.villa": "Villa / complex access +€35",
     "calc.waiting.label": "Extra waiting time",
     "calc.waiting.none": "No waiting +€0",
@@ -681,12 +714,19 @@ function money(n){
   return `€${Number(n || 0).toLocaleString("en-US")}`;
 }
 
+function addSelectLine(lines, selectId, fallbackName){
+  const el = document.getElementById(selectId);
+  if(!el) return 0;
+  const value = Number(el.value || 0);
+  const text = calcSelectedText(el);
+  if(value){
+    lines.push({name: text || fallbackName, price: value});
+  }
+  return value;
+}
+
 function calculatorData(){
   const main = document.querySelector('input[name="mainService"]:checked');
-  const area = document.getElementById("calcArea");
-  const timing = document.getElementById("calcTiming");
-  const property = document.getElementById("calcProperty");
-  const waiting = document.getElementById("calcWaiting");
   const grocery = document.getElementById("calcGrocery");
 
   const lines = [];
@@ -698,29 +738,9 @@ function calculatorData(){
     lines.push({name: main.dataset.serviceName || "Main service", price: value});
   }
 
-  const areaValue = Number(area?.value || 0);
-  if(areaValue){
-    serviceFee += areaValue;
-    lines.push({name: calcSelectedText(area), price: areaValue});
-  }
-
-  const timingValue = Number(timing?.value || 0);
-  if(timingValue){
-    serviceFee += timingValue;
-    lines.push({name: calcSelectedText(timing), price: timingValue});
-  }
-
-  const propertyValue = Number(property?.value || 0);
-  if(propertyValue){
-    serviceFee += propertyValue;
-    lines.push({name: calcSelectedText(property), price: propertyValue});
-  }
-
-  const waitingValue = Number(waiting?.value || 0);
-  if(waitingValue){
-    serviceFee += waitingValue;
-    lines.push({name: calcSelectedText(waiting), price: waitingValue});
-  }
+  ["calcArea", "calcTown", "calcKeys", "calcProperty", "calcTiming", "calcWaiting", "calcArrivalBox", "calcReport"].forEach(id => {
+    serviceFee += addSelectLine(lines, id, id);
+  });
 
   document.querySelectorAll(".calcAddon:checked").forEach(addon => {
     const value = Number(addon.value || 0);
@@ -735,6 +755,8 @@ function calculatorData(){
 function calculatorRequestText(){
   const data = calculatorData();
   const area = calcSelectedText(document.getElementById("calcArea"));
+  const town = calcSelectedText(document.getElementById("calcTown"));
+  const keys = calcSelectedText(document.getElementById("calcKeys"));
   const timing = calcSelectedText(document.getElementById("calcTiming"));
   const property = calcSelectedText(document.getElementById("calcProperty"));
 
@@ -743,16 +765,32 @@ function calculatorRequestText(){
     : "Hello! I would like to request this Luma Alicante estimate.";
 
   const selected = data.lines.length
-    ? data.lines.map(x => `- ${x.name}: ${money(x.price)}`).join("\n")
+    ? data.lines.map(x => `- ${x.name}: ${money(x.price)}`).join("
+")
     : "- no services selected";
 
   const groceryLine = data.groceryValue
-    ? `\nEstimated grocery receipt: ${money(data.groceryValue)}`
+    ? `
+Estimated grocery receipt: ${money(data.groceryValue)}`
     : "";
 
-  const totalLine = `Service fee estimate: ${money(data.serviceFee)}${groceryLine ? `\nService + grocery budget: ${money(data.serviceFee + data.groceryValue)}` : ""}`;
+  const totalLine = `Service fee estimate: ${money(data.serviceFee)}${groceryLine ? `
+Service + grocery budget: ${money(data.serviceFee + data.groceryValue)}` : ""}`;
 
-  return `${intro}\n\nArea: ${area}\nTiming: ${timing}\nProperty type: ${property}\n\nSelected services:\n${selected}\n\n${totalLine}\n\nPlease contact me to confirm address, access, timing and final quote.`;
+  return `${intro}
+
+Area: ${area}
+Town / urbanisation: ${town}
+Keys/access: ${keys}
+Timing: ${timing}
+Property size: ${property}
+
+Selected services:
+${selected}
+
+${totalLine}
+
+Please contact me to confirm address, access, timing and final quote.`;
 }
 
 function updateCalculator(){

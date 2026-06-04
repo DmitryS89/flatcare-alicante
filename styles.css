@@ -1345,3 +1345,23 @@ textarea::placeholder{
     font-size:34px;
   }
 }
+
+
+/* Calculator v2 fields */
+.calc-grocery-field{
+  margin-top:16px;
+}
+
+.calc-group-last{
+  padding-bottom:0;
+  border-bottom:0;
+}
+
+.calculator-panel optgroup{
+  color:var(--muted);
+  font-weight:800;
+}
+
+.calculator-panel option{
+  color:var(--text);
+}
