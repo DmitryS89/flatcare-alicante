@@ -1097,3 +1097,10 @@ textarea::placeholder{
     width:min(220px, 78%);
   }
 }
+
+
+/* Launch polish for final Luma logo */
+.brand-mark-logo{background:var(--accent-dark); border-radius:14px;}
+.brand-mark-logo img{object-fit:cover; transform:scale(1.02);}
+.hero-logo-lockup img{max-height:170px;}
+@media (max-width: 640px){.hero-logo-lockup img{max-height:145px;}}

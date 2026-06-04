@@ -107,3 +107,20 @@ Logo assets:
 - `assets/luma-logo-horizontal.svg`
 - `assets/luma-logo-stacked.svg`
 - `assets/favicon.svg`
+
+
+## Launch domain
+
+Chosen domain: `lumaalicante.com`
+
+Recommended Vercel setup:
+1. Add `lumaalicante.com` in Project → Settings → Domains.
+2. Add `www.lumaalicante.com` too and redirect one version to the other.
+3. If DNS is managed outside Vercel, set:
+   - A record: `@` → `76.76.21.21`
+   - CNAME record: `www` → `cname.vercel-dns.com`
+4. Wait for DNS propagation and SSL activation in Vercel.
+
+Before launch:
+- Replace `WHATSAPP_NUMBER` in `script.js` with the real number.
+- Deploy to production.

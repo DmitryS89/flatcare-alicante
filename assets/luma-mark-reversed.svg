@@ -1,15 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
   <title id="title">Luma Alicante mark reversed</title>
-  <desc id="desc">Reversed minimal arch, open door, steps and sun mark for dark backgrounds.</desc>
+  <desc id="desc">Reversed arched doorway with open door, parallel steps and sun for Luma Alicante.</desc>
   <rect width="180" height="180" rx="34" fill="#0E403B"/>
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="58" cy="34" r="9.5" fill="#DFA550" stroke="none"/>
-    <path d="M60 125 V72 C60 41 120 41 120 72 V125" stroke="#FAF6EE" stroke-width="7.2"/>
-    <path d="M88 66 L112 78 V126 L88 116 Z" fill="#FAF6EE" stroke="#FAF6EE" stroke-width="1.6"/>
-    <path d="M96 95 V105" stroke="#DFA550" stroke-width="4"/>
-    <path d="M78 128 H104" stroke="#DFA550" stroke-width="2.3"/>
-    <path d="M72 135 H111" stroke="#DFA550" stroke-width="2.3"/>
-    <path d="M66 142 H119" stroke="#DFA550" stroke-width="2.3"/>
-    <path d="M58 150 H129" stroke="#DFA550" stroke-width="2.3"/>
+    <circle cx="58" cy="31" r="9.2" fill="#DFA550" stroke="none"/>
+    <path d="M58 126 V72 C58 39 122 39 122 72 V126" stroke="#FAF6EE" stroke-width="7"/>
+    <path d="M88 67 L113 79 V127 L88 116 Z" fill="#FAF6EE" stroke="#FAF6EE" stroke-width="1.4"/>
+    <path d="M112 80 V126" stroke="#FAF6EE" stroke-width="1.1" opacity=".55"/>
+    <path d="M96 94.5 V104" stroke="#DFA550" stroke-width="4"/>
+    <path d="M76 128 H106" stroke="#DFA550" stroke-width="2.5"/>
+    <path d="M70 136 H113" stroke="#DFA550" stroke-width="2.5"/>
+    <path d="M64 144 H121" stroke="#DFA550" stroke-width="2.5"/>
+    <path d="M56 153 H131" stroke="#DFA550" stroke-width="2.5"/>
   </g>
 </svg>
