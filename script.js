@@ -7,6 +7,7 @@ const translations = {
     "nav.services": "Services",
     "nav.arrival": "Arrival Box",
     "nav.prices": "Prices",
+    "nav.estimate": "Estimate",
     "nav.faq": "FAQ",
     "nav.cta": "Request service",
     "hero.eyebrow": "Alicante · Playa San Juan · El Campello",
@@ -73,9 +74,67 @@ const translations = {
     "arrival.subs.text": "If an item is unavailable, we can replace it with a similar product, contact you on WhatsApp or skip it.",
     "arrival.allergy.title": "Allergies",
     "arrival.allergy.text": "We follow your instructions, but we cannot guarantee a completely allergen-free environment.",
+    
+    "prices.exterior.title": "Exterior Check",
+    "prices.exterior.text": "A no-key visual check from outside or common areas with a short photo update.",
+    "prices.exterior.li1": "outside / entrance photos",
+    "prices.exterior.li2": "mailbox check if accessible",
+    "prices.exterior.li3": "short WhatsApp report",
+    "prices.check.title": "Home Check",
+    "prices.check.text": "Inside apartment check for owners abroad, including photos and a simple status report.",
+    "prices.check.li1": "windows, doors and visible leaks",
+    "prices.check.li2": "water, electricity and general condition",
+    "prices.check.li3": "photo report",
+    "prices.plans.title": "Care Plans",
+    "prices.plans.text": "Annual care plans for owners who need key holding and scheduled home checks.",
+    "prices.plans.li1": "key holding",
+    "prices.plans.li2": "scheduled checks",
+    "prices.plans.li3": "preferred extra visit rates",
+    "calc.eyebrow": "Service calculator",
+    "calc.title": "Build your estimate",
+    "calc.subtitle": "Select the services you need and get an indicative service fee before requesting a final quote.",
+    "calc.location.title": "1. Area / hub",
+    "calc.location.label": "Service area",
+    "calc.area.alicante": "Alicante hub",
+    "calc.area.benidorm": "Benidorm hub",
+    "calc.area.south": "South Costa Blanca hub",
+    "calc.area.outside": "Outside hub / by request",
+    "calc.location.hint": "Hub pricing assumes scheduled route days. Specific urgent dates may change the quote.",
+    "calc.service.title": "2. Main service",
+    "calc.service.exterior": "Exterior Check — from €39",
+    "calc.service.home": "Home Check — from €79",
+    "calc.service.prearrival": "Pre-arrival Check — from €99",
+    "calc.service.ready": "Full Arrival Ready — from €149",
+    "calc.service.tech": "Technician / delivery access — from €89",
+    "calc.addons.title": "3. Add-ons",
+    "calc.addon.arrival": "Arrival Box shopping service +€69",
+    "calc.addon.key": "Annual key holding +€149/year",
+    "calc.addon.beds": "Make beds before arrival +€25",
+    "calc.addon.cleaning": "Cleaning coordination +€20",
+    "calc.timing.label": "Timing",
+    "calc.timing.route": "Scheduled route day +€0",
+    "calc.timing.specific": "Specific requested day +€20",
+    "calc.timing.urgent": "Urgent / same-day +€50",
+    "calc.timing.weekend": "Evening / weekend +€30",
+    "calc.property.label": "Property type",
+    "calc.property.apartment": "Apartment / studio +€0",
+    "calc.property.townhouse": "Townhouse / large apartment +€20",
+    "calc.property.villa": "Villa / complex access +€35",
+    "calc.waiting.label": "Extra waiting time",
+    "calc.waiting.none": "No waiting +€0",
+    "calc.waiting.one": "Up to 1 extra hour +€30",
+    "calc.waiting.two": "Up to 2 extra hours +€60",
+    "calc.waiting.three": "Up to 3 extra hours +€90",
+    "calc.grocery.label": "Estimated grocery receipt",
+    "calc.summary.eyebrow": "Estimated quote",
+    "calc.summary.serviceFee": "Service fee",
+    "calc.summary.withGroceries": "Service + grocery budget",
+    "calc.summary.includes": "Selected items",
+    "calc.summary.disclaimer": "This is an indicative estimate. Final quote depends on address, keys/access, parking, timing, supermarket receipt and third-party invoices.",
+    "calc.summary.cta": "Request this estimate",
     "prices.eyebrow": "Simple starting prices",
     "prices.title": "Plans and service fees",
-    "prices.subtitle": "Prices are starting points. We confirm the final quote after address, access and arrival details.",
+    "prices.subtitle": "Prices are starting points. Products, third-party invoices and unusual access conditions are confirmed separately.",
     "prices.badge": "Best start",
     "prices.arrival.title": "Arrival Box",
     "prices.arrival.text": "Shopping service fee. Products are charged at actual supermarket receipt price.",
@@ -83,8 +142,8 @@ const translations = {
     "prices.arrival.li2": "fresh shopping by request",
     "prices.arrival.li3": "delivery and placement inside",
     "prices.ready.title": "Full Arrival Ready",
-    "prices.ready.text": "Apartment check, airing, fridge on, utility check and Arrival Box coordination.",
-    "prices.ready.li1": "pre-arrival apartment check",
+    "prices.ready.text": "Pre-arrival check, airing, fridge on, utilities check and Arrival Box coordination.",
+    "prices.ready.li1": "apartment prepared before arrival",
     "prices.ready.li2": "grocery shopping service",
     "prices.ready.li3": "photo report before arrival",
     "prices.home.title": "Home Check",
@@ -196,6 +255,7 @@ const translations = {
     "nav.services": "Servicios",
     "nav.arrival": "Arrival Box",
     "nav.prices": "Precios",
+    "nav.estimate": "Calculadora",
     "nav.faq": "FAQ",
     "nav.cta": "Solicitar servicio",
     "hero.eyebrow": "Alicante · Playa San Juan · El Campello",
@@ -560,6 +620,7 @@ function initLang(){
       renderItems();
       setPreset(document.querySelector(".preset.active")?.dataset.preset || "basic");
       updateSummary();
+      updateCalculator();
     });
   });
 }
@@ -609,6 +670,129 @@ function initLeadForm(){
   });
 }
 
+
+
+function calcSelectedText(selectEl){
+  const opt = selectEl.options[selectEl.selectedIndex];
+  return opt ? opt.textContent.trim() : "";
+}
+
+function money(n){
+  return `€${Number(n || 0).toLocaleString("en-US")}`;
+}
+
+function calculatorData(){
+  const main = document.querySelector('input[name="mainService"]:checked');
+  const area = document.getElementById("calcArea");
+  const timing = document.getElementById("calcTiming");
+  const property = document.getElementById("calcProperty");
+  const waiting = document.getElementById("calcWaiting");
+  const grocery = document.getElementById("calcGrocery");
+
+  const lines = [];
+  let serviceFee = 0;
+
+  if(main){
+    const value = Number(main.value);
+    serviceFee += value;
+    lines.push({name: main.dataset.serviceName || "Main service", price: value});
+  }
+
+  const areaValue = Number(area?.value || 0);
+  if(areaValue){
+    serviceFee += areaValue;
+    lines.push({name: calcSelectedText(area), price: areaValue});
+  }
+
+  const timingValue = Number(timing?.value || 0);
+  if(timingValue){
+    serviceFee += timingValue;
+    lines.push({name: calcSelectedText(timing), price: timingValue});
+  }
+
+  const propertyValue = Number(property?.value || 0);
+  if(propertyValue){
+    serviceFee += propertyValue;
+    lines.push({name: calcSelectedText(property), price: propertyValue});
+  }
+
+  const waitingValue = Number(waiting?.value || 0);
+  if(waitingValue){
+    serviceFee += waitingValue;
+    lines.push({name: calcSelectedText(waiting), price: waitingValue});
+  }
+
+  document.querySelectorAll(".calcAddon:checked").forEach(addon => {
+    const value = Number(addon.value || 0);
+    serviceFee += value;
+    lines.push({name: addon.dataset.addonName || addon.closest("label").textContent.trim(), price: value});
+  });
+
+  const groceryValue = Math.max(0, Number(grocery?.value || 0));
+  return {serviceFee, groceryValue, lines};
+}
+
+function calculatorRequestText(){
+  const data = calculatorData();
+  const area = calcSelectedText(document.getElementById("calcArea"));
+  const timing = calcSelectedText(document.getElementById("calcTiming"));
+  const property = calcSelectedText(document.getElementById("calcProperty"));
+
+  const intro = currentLang === "es"
+    ? "Hola. Me gustaría solicitar esta estimación de Luma Alicante."
+    : "Hello! I would like to request this Luma Alicante estimate.";
+
+  const selected = data.lines.length
+    ? data.lines.map(x => `- ${x.name}: ${money(x.price)}`).join("\n")
+    : "- no services selected";
+
+  const groceryLine = data.groceryValue
+    ? `\nEstimated grocery receipt: ${money(data.groceryValue)}`
+    : "";
+
+  const totalLine = `Service fee estimate: ${money(data.serviceFee)}${groceryLine ? `\nService + grocery budget: ${money(data.serviceFee + data.groceryValue)}` : ""}`;
+
+  return `${intro}\n\nArea: ${area}\nTiming: ${timing}\nProperty type: ${property}\n\nSelected services:\n${selected}\n\n${totalLine}\n\nPlease contact me to confirm address, access, timing and final quote.`;
+}
+
+function updateCalculator(){
+  const serviceFeeEl = document.getElementById("calcServiceFee");
+  if(!serviceFeeEl) return;
+
+  const data = calculatorData();
+  const grand = data.serviceFee + data.groceryValue;
+
+  serviceFeeEl.textContent = money(data.serviceFee);
+  document.getElementById("calcGrandTotal").textContent = money(grand);
+
+  const breakdown = document.getElementById("calcBreakdown");
+  breakdown.innerHTML = "";
+  data.lines.forEach(line => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${line.name}</span><strong>${money(line.price)}</strong>`;
+    breakdown.appendChild(li);
+  });
+  if(data.groceryValue){
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${currentLang === "es" ? "Compra estimada" : "Estimated grocery receipt"}</span><strong>${money(data.groceryValue)}</strong>`;
+    breakdown.appendChild(li);
+  }
+
+  const wa = document.getElementById("calculatorWhatsapp");
+  wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(calculatorRequestText())}`;
+}
+
+function initCalculator(){
+  const calc = document.getElementById("calculator");
+  if(!calc) return;
+  calc.querySelectorAll("input, select").forEach(el => {
+    el.addEventListener("change", updateCalculator);
+    el.addEventListener("input", updateCalculator);
+  });
+  updateCalculator();
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   initLang();
   renderTranslations();
@@ -616,5 +800,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initPresets();
   initCopy();
   initLeadForm();
+  initCalculator();
   setPreset("basic");
 });

@@ -29,6 +29,7 @@
         <a data-i18n="nav.arrival" href="#arrival">Arrival Box</a>
         <a data-i18n="nav.report" href="#photo-report">Photo report</a>
         <a data-i18n="nav.prices" href="#prices">Prices</a>
+        <a data-i18n="nav.estimate" href="#calculator">Estimate</a>
         <a data-i18n="nav.faq" href="#faq">FAQ</a>
       </nav>
 
@@ -324,13 +325,47 @@
         <div class="section-head">
           <p class="eyebrow" data-i18n="prices.eyebrow">Simple starting prices</p>
           <h2 data-i18n="prices.title">Plans and service fees</h2>
-          <p data-i18n="prices.subtitle">Prices are starting points. We confirm the final quote after address, access and arrival details.</p>
+          <p data-i18n="prices.subtitle">Prices are starting points. Products, third-party invoices and unusual access conditions are confirmed separately.</p>
         </div>
 
         <div class="pricing-grid">
           <article class="price-card">
-            <h3 data-i18n="prices.arrival.title">Arrival Box</h3>
+            <h3 data-i18n="prices.exterior.title">Exterior Check</h3>
             <p class="price">€39+</p>
+            <p data-i18n="prices.exterior.text">A no-key visual check from outside or common areas with a short photo update.</p>
+            <ul>
+              <li data-i18n="prices.exterior.li1">outside / entrance photos</li>
+              <li data-i18n="prices.exterior.li2">mailbox check if accessible</li>
+              <li data-i18n="prices.exterior.li3">short WhatsApp report</li>
+            </ul>
+          </article>
+
+          <article class="price-card">
+            <h3 data-i18n="prices.check.title">Home Check</h3>
+            <p class="price">€79+</p>
+            <p data-i18n="prices.check.text">Inside apartment check for owners abroad, including photos and a simple status report.</p>
+            <ul>
+              <li data-i18n="prices.check.li1">windows, doors and visible leaks</li>
+              <li data-i18n="prices.check.li2">water, electricity and general condition</li>
+              <li data-i18n="prices.check.li3">photo report</li>
+            </ul>
+          </article>
+
+          <article class="price-card featured">
+            <div class="badge" data-i18n="prices.badge">Best start</div>
+            <h3 data-i18n="prices.ready.title">Full Arrival Ready</h3>
+            <p class="price">€149+</p>
+            <p data-i18n="prices.ready.text">Pre-arrival check, airing, fridge on, utilities check and Arrival Box coordination.</p>
+            <ul>
+              <li data-i18n="prices.ready.li1">apartment prepared before arrival</li>
+              <li data-i18n="prices.ready.li2">grocery shopping service</li>
+              <li data-i18n="prices.ready.li3">photo report before arrival</li>
+            </ul>
+          </article>
+
+          <article class="price-card">
+            <h3 data-i18n="prices.arrival.title">Arrival Box</h3>
+            <p class="price">€69+</p>
             <p data-i18n="prices.arrival.text">Shopping service fee. Products are charged at actual supermarket receipt price.</p>
             <ul>
               <li data-i18n="prices.arrival.li1">custom grocery checklist</li>
@@ -339,39 +374,123 @@
             </ul>
           </article>
 
-          <article class="price-card featured">
-            <div class="badge" data-i18n="prices.badge">Best start</div>
-            <h3 data-i18n="prices.ready.title">Full Arrival Ready</h3>
-            <p class="price">€129+</p>
-            <p data-i18n="prices.ready.text">Apartment check, airing, fridge on, utility check and Arrival Box coordination.</p>
-            <ul>
-              <li data-i18n="prices.ready.li1">pre-arrival apartment check</li>
-              <li data-i18n="prices.ready.li2">grocery shopping service</li>
-              <li data-i18n="prices.ready.li3">photo report before arrival</li>
-            </ul>
-          </article>
-
           <article class="price-card">
-            <h3 data-i18n="prices.home.title">Home Check</h3>
-            <p class="price">€69/mo</p>
-            <p data-i18n="prices.home.text">Monthly visual apartment check for second-home owners who live abroad.</p>
+            <h3 data-i18n="prices.plans.title">Care Plans</h3>
+            <p class="price">€299+/yr</p>
+            <p data-i18n="prices.plans.text">Annual care plans for owners who need key holding and scheduled home checks.</p>
             <ul>
-              <li data-i18n="prices.home.li1">windows, doors and leaks</li>
-              <li data-i18n="prices.home.li2">water, electricity and general condition</li>
-              <li data-i18n="prices.home.li3">photo report</li>
+              <li data-i18n="prices.plans.li1">key holding</li>
+              <li data-i18n="prices.plans.li2">scheduled checks</li>
+              <li data-i18n="prices.plans.li3">preferred extra visit rates</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="price-card">
-            <h3 data-i18n="prices.key.title">Key Holding</h3>
-            <p class="price">€39/mo</p>
-            <p data-i18n="prices.key.text">Key custody and controlled access for approved visits, deliveries or maintenance.</p>
-            <ul>
-              <li data-i18n="prices.key.li1">key custody</li>
-              <li data-i18n="prices.key.li2">access log</li>
-              <li data-i18n="prices.key.li3">extra visits by request</li>
-            </ul>
-          </article>
+    <section class="section section-alt calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="calc.eyebrow">Service calculator</p>
+          <h2 data-i18n="calc.title">Build your estimate</h2>
+          <p data-i18n="calc.subtitle">Select the services you need and get an indicative service fee before requesting a final quote.</p>
+        </div>
+
+        <div class="calculator-grid">
+          <div class="calculator-panel">
+            <div class="calc-group">
+              <h3 data-i18n="calc.location.title">1. Area / hub</h3>
+              <label class="calc-field">
+                <span data-i18n="calc.location.label">Service area</span>
+                <select id="calcArea">
+                  <option value="0" data-i18n="calc.area.alicante">Alicante hub</option>
+                  <option value="0" data-i18n="calc.area.benidorm">Benidorm hub</option>
+                  <option value="0" data-i18n="calc.area.south">South Costa Blanca hub</option>
+                  <option value="35" data-i18n="calc.area.outside">Outside hub / by request</option>
+                </select>
+              </label>
+              <p class="calc-hint" data-i18n="calc.location.hint">Hub pricing assumes scheduled route days. Specific urgent dates may change the quote.</p>
+            </div>
+
+            <div class="calc-group">
+              <h3 data-i18n="calc.service.title">2. Main service</h3>
+              <div class="calc-options">
+                <label><input type="radio" name="mainService" value="39" data-service-name="Exterior Check" checked> <span data-i18n="calc.service.exterior">Exterior Check — from €39</span></label>
+                <label><input type="radio" name="mainService" value="79" data-service-name="Home Check"> <span data-i18n="calc.service.home">Home Check — from €79</span></label>
+                <label><input type="radio" name="mainService" value="99" data-service-name="Pre-arrival Check"> <span data-i18n="calc.service.prearrival">Pre-arrival Check — from €99</span></label>
+                <label><input type="radio" name="mainService" value="149" data-service-name="Full Arrival Ready"> <span data-i18n="calc.service.ready">Full Arrival Ready — from €149</span></label>
+                <label><input type="radio" name="mainService" value="89" data-service-name="Technician / delivery access"> <span data-i18n="calc.service.tech">Technician / delivery access — from €89</span></label>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <h3 data-i18n="calc.addons.title">3. Add-ons</h3>
+              <div class="calc-options">
+                <label><input type="checkbox" class="calcAddon" value="69" data-addon-name="Arrival Box shopping service"> <span data-i18n="calc.addon.arrival">Arrival Box shopping service +€69</span></label>
+                <label><input type="checkbox" class="calcAddon" value="149" data-addon-name="Annual key holding"> <span data-i18n="calc.addon.key">Annual key holding +€149/year</span></label>
+                <label><input type="checkbox" class="calcAddon" value="25" data-addon-name="Make beds before arrival"> <span data-i18n="calc.addon.beds">Make beds before arrival +€25</span></label>
+                <label><input type="checkbox" class="calcAddon" value="20" data-addon-name="Cleaning coordination"> <span data-i18n="calc.addon.cleaning">Cleaning coordination +€20</span></label>
+              </div>
+            </div>
+
+            <div class="calc-row">
+              <label class="calc-field">
+                <span data-i18n="calc.timing.label">Timing</span>
+                <select id="calcTiming">
+                  <option value="0" data-i18n="calc.timing.route">Scheduled route day +€0</option>
+                  <option value="20" data-i18n="calc.timing.specific">Specific requested day +€20</option>
+                  <option value="50" data-i18n="calc.timing.urgent">Urgent / same-day +€50</option>
+                  <option value="30" data-i18n="calc.timing.weekend">Evening / weekend +€30</option>
+                </select>
+              </label>
+
+              <label class="calc-field">
+                <span data-i18n="calc.property.label">Property type</span>
+                <select id="calcProperty">
+                  <option value="0" data-i18n="calc.property.apartment">Apartment / studio +€0</option>
+                  <option value="20" data-i18n="calc.property.townhouse">Townhouse / large apartment +€20</option>
+                  <option value="35" data-i18n="calc.property.villa">Villa / complex access +€35</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="calc-row">
+              <label class="calc-field">
+                <span data-i18n="calc.waiting.label">Extra waiting time</span>
+                <select id="calcWaiting">
+                  <option value="0" data-i18n="calc.waiting.none">No waiting +€0</option>
+                  <option value="30" data-i18n="calc.waiting.one">Up to 1 extra hour +€30</option>
+                  <option value="60" data-i18n="calc.waiting.two">Up to 2 extra hours +€60</option>
+                  <option value="90" data-i18n="calc.waiting.three">Up to 3 extra hours +€90</option>
+                </select>
+              </label>
+
+              <label class="calc-field">
+                <span data-i18n="calc.grocery.label">Estimated grocery receipt</span>
+                <input id="calcGrocery" type="number" min="0" max="1000" step="10" value="0" />
+              </label>
+            </div>
+          </div>
+
+          <aside class="calculator-summary">
+            <p class="eyebrow" data-i18n="calc.summary.eyebrow">Estimated quote</p>
+            <div class="calc-total">
+              <span data-i18n="calc.summary.serviceFee">Service fee</span>
+              <strong id="calcServiceFee">€39</strong>
+            </div>
+            <div class="calc-total calc-total-muted">
+              <span data-i18n="calc.summary.withGroceries">Service + grocery budget</span>
+              <strong id="calcGrandTotal">€39</strong>
+            </div>
+
+            <div class="calc-breakdown">
+              <h3 data-i18n="calc.summary.includes">Selected items</h3>
+              <ul id="calcBreakdown"></ul>
+            </div>
+
+            <p class="calc-disclaimer" data-i18n="calc.summary.disclaimer">This is an indicative estimate. Final quote depends on address, keys/access, parking, timing, supermarket receipt and third-party invoices.</p>
+            <a class="btn btn-full" id="calculatorWhatsapp" href="#contact" data-i18n="calc.summary.cta">Request this estimate</a>
+          </aside>
         </div>
       </div>
     </section>
@@ -480,6 +599,7 @@
           <label>
             <span data-i18n="form.service">Service needed</span>
             <select id="service" name="service">
+              <option value="Exterior Check">Exterior Check</option>
               <option value="Full Arrival Ready">Full Arrival Ready</option>
               <option value="Arrival Box">Arrival Box</option>
               <option value="Home Check">Home Check</option>
@@ -512,6 +632,7 @@
         <a href="#arrival" data-i18n="nav.arrival">Arrival Box</a>
         <a href="#photo-report" data-i18n="nav.report">Photo report</a>
         <a href="#prices" data-i18n="nav.prices">Prices</a>
+        <a href="#calculator" data-i18n="nav.estimate">Estimate</a>
         <a href="#contact" data-i18n="nav.cta">Request service</a>
       </div>
     </div>

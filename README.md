@@ -143,3 +143,14 @@ Language strategy updated for launch:
 - Website now works only in English and Spanish
 - Old `ru` localStorage selection is automatically reset to English
 - Arrival Box item labels now use EN/ES only
+
+
+## Version 9 updates
+
+Added Service Calculator / Estimate Builder:
+- EN/ES calculator section
+- Main service selection
+- Add-ons, timing, property type, waiting time and grocery receipt estimate
+- Indicative service fee and service + grocery budget
+- WhatsApp request link with selected estimate
+- Added Exterior Check as entry-level no-key service
