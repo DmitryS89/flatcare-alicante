@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luma Alicante — Arrival Box</title>
+  <meta name="description" content="Arrival Box grocery and essentials setup for Alicante property owners when Luma has authorised apartment access." />
+  <link rel="canonical" href="https://lumaalicante.com/arrival-box.html" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html#top" class="brand" aria-label="Luma Alicante home">
+        <span class="brand-mark brand-mark-logo"><img src="assets/luma-mark-header.svg" alt="" /></span>
+        <span class="brand-text">Luma Alicante</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a data-i18n="nav.services" href="index.html#services">Services</a>
+        <a data-i18n="nav.security" href="index.html#key-security">Key security</a>
+        <a data-i18n="nav.arrival" href="arrival-box.html">Arrival Box</a>
+        <a data-i18n="nav.prices" href="index.html#prices">Prices</a>
+        <a data-i18n="nav.estimate" href="index.html#calculator">Estimate</a>
+        <a data-i18n="nav.faq" href="index.html#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" aria-label="Language">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="es" type="button">ES</button>
+        </div>
+        <a class="btn btn-small" href="index.html#contact" data-i18n="nav.cta">Request service</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero hero-compact">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="arrivalPage.eyebrow">Arrival Box add-on</p>
+          <h1 data-i18n="arrivalPage.title">Groceries and essentials placed inside before you arrive.</h1>
+          <p class="hero-subtitle" data-i18n="arrivalPage.subtitle">Arrival Box is an add-on for owners who already have authorised access arranged with Luma: key holding, key collection, concierge, neighbour or property manager.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#arrival" data-i18n="arrivalPage.primary">Build Arrival Box</a>
+            <a class="btn btn-secondary" href="index.html#contact" data-i18n="arrivalPage.secondary">Arrange access first</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini-card">
+            <span class="mini-label" data-i18n="arrivalPage.cardTitle">Important</span>
+            <div class="mini-item">
+              <span>01</span>
+              <div><strong data-i18n="arrivalPage.item1.title">Inside only</strong><p data-i18n="arrivalPage.item1.text">We do not leave groceries outside doors or in corridors.</p></div>
+            </div>
+            <div class="mini-item">
+              <span>02</span>
+              <div><strong data-i18n="arrivalPage.item2.title">Access required</strong><p data-i18n="arrivalPage.item2.text">Luma needs authorised access before shopping and placement.</p></div>
+            </div>
+            <div class="mini-item">
+              <span>03</span>
+              <div><strong data-i18n="arrivalPage.item3.title">Receipt separate</strong><p data-i18n="arrivalPage.item3.text">Products are charged at supermarket receipt price.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="arrival">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="arrival.eyebrow">Pre-arrival stocking</p>
+          <h2 data-i18n="arrival.title">Build your Arrival Box</h2>
+          <p data-i18n="arrival.subtitle">Choose what you want to find inside the apartment. Arrival Box is available only when Luma has authorised access to the property.</p>
+        </div>
+
+        <div class="access-note">
+          <strong data-i18n="arrival.access.title">Apartment access required</strong>
+          <p data-i18n="arrival.access.text">We place groceries inside the property only. We do not leave food or household items outside the door, in corridors or in common areas.</p>
+        </div>
+
+        <div class="builder-layout">
+          <div class="builder">
+            <div class="builder-toolbar">
+              <button type="button" class="preset active" data-preset="basic" data-i18n="arrival.preset.basic">Basic</button>
+              <button type="button" class="preset" data-preset="family" data-i18n="arrival.preset.family">Family</button>
+              <button type="button" class="preset" data-preset="baby" data-i18n="arrival.preset.baby">Baby</button>
+              <button type="button" class="preset" data-preset="longstay" data-i18n="arrival.preset.longstay">Long stay</button>
+              <button type="button" class="preset" data-preset="custom" data-i18n="arrival.preset.custom">Custom</button>
+            </div>
+
+            <div class="accordion">
+              <details open>
+                <summary data-i18n="arrival.cat.drinks">Drinks</summary>
+                <div class="check-grid" data-category="drinks"></div>
+              </details>
+              <details open>
+                <summary data-i18n="arrival.cat.breakfast">Breakfast</summary>
+                <div class="check-grid" data-category="breakfast"></div>
+              </details>
+              <details>
+                <summary data-i18n="arrival.cat.fresh">Fresh food</summary>
+                <div class="check-grid" data-category="fresh"></div>
+              </details>
+              <details>
+                <summary data-i18n="arrival.cat.kids">Kids & baby</summary>
+                <div class="check-grid" data-category="kids"></div>
+              </details>
+              <details open>
+                <summary data-i18n="arrival.cat.household">Household basics</summary>
+                <div class="check-grid" data-category="household"></div>
+              </details>
+              <details>
+                <summary data-i18n="arrival.cat.beach">Beach essentials</summary>
+                <div class="check-grid" data-category="beach"></div>
+              </details>
+              <details open>
+                <summary data-i18n="arrival.cat.prep">Apartment preparation</summary>
+                <div class="check-grid" data-category="prep"></div>
+              </details>
+            </div>
+          </div>
+
+          <aside class="summary-card">
+            <h3 data-i18n="summary.title">Your request</h3>
+            <div class="summary-count"><span id="selectedCount">0</span> <span data-i18n="summary.items">items selected</span></div>
+            <ul id="selectedList" class="selected-list"></ul>
+            <div class="summary-note">
+              <strong data-i18n="summary.priceTitle">Pricing</strong>
+              <p data-i18n="summary.priceText">Service fee from €39 + supermarket receipt. Final quote depends on location, timing and access.</p>
+            </div>
+            <a id="whatsappBuilder" class="btn btn-full" href="#" target="_blank" rel="noreferrer" data-i18n="summary.whatsapp">Send via WhatsApp</a>
+            <button id="copyRequest" class="btn btn-secondary btn-full" type="button" data-i18n="summary.copy">Copy request</button>
+          </aside>
+        </div>
+
+        <div class="notice-grid">
+          <div class="notice">
+            <h3 data-i18n="arrival.rules.title">We do not provide</h3>
+            <p data-i18n="arrival.rules.text">Prescription medicine, tobacco/nicotine, unpackaged cooked food, high-value items or baby formula without exact brand instructions.</p>
+          </div>
+          <div class="notice">
+            <h3 data-i18n="arrival.subs.title">Substitutions</h3>
+            <p data-i18n="arrival.subs.text">If an item is unavailable, we can replace it with a similar product, contact you on WhatsApp or skip it.</p>
+          </div>
+          <div class="notice">
+            <h3 data-i18n="arrival.allergy.title">Allergies</h3>
+            <p data-i18n="arrival.allergy.text">We follow your instructions, but we cannot guarantee a completely allergen-free environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="arrivalPage.levels.eyebrow">Arrival Box levels</p>
+          <h2 data-i18n="arrivalPage.levels.title">Choose the level that matches your arrival.</h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3 data-i18n="arrivalPage.basic.title">Basic Arrival Box</h3>
+            <p class="price">€69+</p>
+            <p data-i18n="arrivalPage.basic.text">Water, breakfast basics, coffee, fruit and simple household essentials.</p>
+          </article>
+          <article class="price-card featured">
+            <div class="badge" data-i18n="prices.badge">Best start</div>
+            <h3 data-i18n="arrivalPage.family.title">Family Arrival Box</h3>
+            <p class="price">€89+</p>
+            <p data-i18n="arrivalPage.family.text">More water, breakfast, snacks, kids-friendly items and essentials for late arrivals.</p>
+          </article>
+          <article class="price-card">
+            <h3 data-i18n="arrivalPage.long.title">Long-Stay Starter</h3>
+            <p class="price">€119+</p>
+            <p data-i18n="arrivalPage.long.text">Food basics plus household starter items such as detergent, dishwasher tablets and paper goods.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-card">
+        <div>
+          <p class="eyebrow" data-i18n="arrivalPage.cta.eyebrow">Need access first?</p>
+          <h2 data-i18n="arrivalPage.cta.title">Arrival Box works best with key holding.</h2>
+          <p data-i18n="arrivalPage.cta.text">Most owners arrange key holding first. Then Luma can check the home, turn on the fridge and place groceries inside before arrival.</p>
+        </div>
+        <a class="btn" href="index.html#contact" data-i18n="arrivalPage.cta.button">Arrange key holding</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html#top" class="brand brand-footer">
+          <span class="brand-mark brand-mark-logo"><img src="assets/luma-mark-header.svg" alt="" /></span>
+          <span class="brand-text">Luma Alicante</span>
+        </a>
+        <p data-i18n="footer.text">Property care, secure key holding and scheduled home checks in Alicante.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="index.html#key-security" data-i18n="nav.security">Key security</a>
+        <a href="arrival-box.html" data-i18n="nav.arrival">Arrival Box</a>
+        <a href="index.html#prices" data-i18n="nav.prices">Prices</a>
+        <a href="index.html#contact" data-i18n="nav.cta">Request service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

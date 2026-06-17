@@ -1,6 +1,8 @@
 // Replace with your real WhatsApp number in international format, digits only.
 // Example: const WHATSAPP_NUMBER = "34600111222";
 const WHATSAPP_NUMBER = "34XXXXXXXXX";
+// Replace with your real contact email before publishing.
+const CONTACT_EMAIL = "hello@lumaalicante.com";
 
 const translations = {
   "en": {
@@ -104,10 +106,10 @@ const translations = {
     "calc.access.neighbour": "Keys with neighbour / concierge +€10",
     "calc.access.collect": "Key collection required +€25",
     "calc.access.handover": "First key handover / setup +€35",
-    "calc.property.label": "Property size",
-    "calc.property.studio": "Studio / 1 bedroom +€0",
-    "calc.property.two": "2 bedrooms +€10",
-    "calc.property.three": "3 bedrooms +€20",
+    "calc.property.label": "Property type",
+    "calc.property.studio": "Apartment / flat +€0",
+    "calc.property.two": "Townhouse +€25",
+    "calc.property.three": "House / villa +€35",
     "calc.property.villa": "Villa / large house +€35",
     "calc.timing.title": "4. Timing and waiting",
     "calc.arrivalbox.title": "5. Arrival Box and report",
@@ -123,6 +125,29 @@ const translations = {
     "calc.report.video": "Video walkthrough +€20",
     "calc.addons.title": "6. Extra options",
     "calc.addon.cleaningCheck": "Cleaning inspection after cleaner +€25",
+    
+    "calc.service.title": "2. One-off service",
+    "calc.service.none": "No one-off visit now — €0",
+    "calc.service.home": "One-time Home Check — from €79",
+    "calc.service.ready": "Arrival Ready Setup — from €149",
+    "calc.frequency.title": "3. Ongoing home checks",
+    "calc.frequency.label": "How often should we check the property?",
+    "calc.frequency.none": "No ongoing plan +€0",
+    "calc.frequency.monthly": "1 check per month — €399/year",
+    "calc.frequency.twice": "2 checks per month — €649/year",
+    "calc.frequency.weekly": "4 checks per month — €999/year",
+    "calc.frequency.hint": "Annual plans include scheduled route-day visits. Extra or urgent visits are charged separately.",
+    "calc.access.title": "4. Keys and access",
+    "calc.timing.title": "5. Timing and waiting",
+    "calc.arrivalbox.title": "6. Arrival Box and report",
+    "calc.addons.title": "7. Extra options",
+    "calc.property.label": "Property type",
+    "calc.property.apartment": "Apartment / flat +€0",
+    "calc.property.townhouse": "Townhouse +€25",
+    "calc.property.house": "House / villa +€35",
+    "calc.property.quote": "Large or complex property — by quote",
+    "prices.ready.title": "Arrival Ready Setup",
+    "prices.ready.text": "Full preparation before arrival: home check, airing, fridge on and grocery setup coordination.",
     "calc.eyebrow": "Service calculator",
     "calc.title": "Build your estimate",
     "calc.subtitle": "Select the services you need and get an indicative service fee before requesting a final quote.",
@@ -133,11 +158,11 @@ const translations = {
     "calc.area.south": "South Costa Blanca hub",
     "calc.area.outside": "Outside hub / by request",
     "calc.location.hint": "Hub pricing assumes scheduled route days. Specific urgent dates may change the quote.",
-    "calc.service.title": "2. Main service",
+    "calc.service.title": "2. One-off service",
     "calc.service.exterior": "Exterior Check — from €39",
     "calc.service.home": "Home Check — from €79",
-    "calc.service.prearrival": "Pre-arrival Check — from €99",
-    "calc.service.ready": "Full Arrival Ready — from €149",
+    "calc.service.prearrival": "Pre-arrival Check — removed",
+    "calc.service.ready": "Arrival Ready Setup — from €149",
     "calc.service.tech": "Technician / delivery access — from €89",
     "calc.addons.title": "3. Add-ons",
     "calc.addon.arrival": "Arrival Box shopping service +€69",
@@ -174,7 +199,7 @@ const translations = {
     "prices.arrival.li1": "custom grocery checklist",
     "prices.arrival.li2": "fresh shopping by request",
     "prices.arrival.li3": "delivery and placement inside",
-    "prices.ready.title": "Full Arrival Ready",
+    "prices.ready.title": "Arrival Ready Setup",
     "prices.ready.text": "Pre-arrival check, airing, fridge on, utilities check and Arrival Box coordination.",
     "prices.ready.li1": "apartment prepared before arrival",
     "prices.ready.li2": "grocery shopping service",
@@ -364,7 +389,7 @@ const translations = {
     "prices.arrival.li1": "lista personalizada",
     "prices.arrival.li2": "compra fresca bajo pedido",
     "prices.arrival.li3": "entrega y colocación dentro",
-    "prices.ready.title": "Full Arrival Ready",
+    "prices.ready.title": "Arrival Ready Setup",
     "prices.ready.text": "Revisión, ventilación, nevera encendida, suministros y coordinación del Arrival Box.",
     "prices.ready.li1": "revisión antes de llegada",
     "prices.ready.li2": "servicio de compra",
@@ -474,6 +499,301 @@ const translations = {
     "scope.text": "Nos centramos en cuidado de vivienda, custodia de llaves, revisiones, preparación antes de llegada y coordinación. No gestionamos alquiler turístico ni ofrecemos servicios legales/fiscales. Si hace falta, podemos coordinar con profesionales independientes."
   }
 };
+
+
+// Trust-first homepage and Arrival Box page translation overrides
+Object.assign(translations.en, {
+  "nav.security": "Key security",
+  "hero.eyebrow": "Alicante · Costa Blanca · Owners abroad",
+  "hero.title": "Property care and key holding in Alicante for owners abroad.",
+  "hero.subtitle": "We securely hold your keys, check your home on a schedule and send clear photo reports while you are away.",
+  "hero.primary": "Get a key holding quote",
+  "hero.secondary": "Calculate care plan",
+  "hero.trust1.title": "Secure key holding",
+  "hero.trust1.text": "coded keys, no address labels",
+  "hero.trust2.title": "Scheduled checks",
+  "hero.trust2.text": "1, 2 or 4 times per month",
+  "hero.trust3.title": "Photo reports",
+  "hero.trust3.text": "after every visit",
+  "hero.cardTitle": "Most requested",
+  "hero.item1.title": "Key holding",
+  "hero.item1.text": "secure local access for checks, technicians and arrival preparation.",
+  "hero.item2.title": "Monthly home checks",
+  "hero.item2.text": "windows, doors, leaks, water, electricity, humidity and photo report.",
+  "hero.item3.title": "Technician access",
+  "hero.item3.text": "we open the property for approved repairs, deliveries or maintenance visits.",
+  "hero.cardCta": "Request property care",
+  "problem.eyebrow": "For second-home owners abroad",
+  "problem.title": "Your property needs a trusted local contact, not just a cleaner.",
+  "problem.text": "When you are outside Spain, small issues can become expensive: leaks, humidity, stuck windows, missing keys, utility problems or missed technician visits. Luma gives you authorised local access, scheduled checks and documented reports.",
+  "pain.keys.title": "Keys handled safely",
+  "pain.keys.text": "Keys are coded, not labelled with your address, and access is given only with approval.",
+  "pain.checks.title": "Regular visibility",
+  "pain.checks.text": "Choose 1, 2 or 4 checks per month so the home is not left unseen for long periods.",
+  "pain.proof.title": "Proof after each visit",
+  "pain.proof.text": "Every visit is documented with photos, notes and a short status summary.",
+  "services.title": "Property care built around keys, checks and proof.",
+  "services.subtitle": "Start with secure key holding and scheduled home checks. Add arrival preparation, technician access or Arrival Box when needed.",
+  "services.key.title": "Secure key holding",
+  "services.key.text": "Coded key custody, access only with written approval and a clear visit log.",
+  "services.check.title": "Scheduled home checks",
+  "services.check.text": "Monthly, twice-monthly or weekly visual checks with photos and a short status report.",
+  "services.maintenance.title": "Technician & delivery access",
+  "services.maintenance.text": "We open the property for approved technicians, deliveries or maintenance visits.",
+  "services.prepare.title": "Arrival Ready Setup",
+  "services.prepare.text": "Before you arrive, we can air the property, turn on the fridge and check basic utilities.",
+  "services.arrival.title": "Arrival Box add-on",
+  "services.arrival.text": "Groceries and essentials placed inside before arrival when Luma has authorised access.",
+  "services.arrival.link": "View Arrival Box page",
+  "services.cleaning.text": "We coordinate with local cleaning partners and can check the result after cleaning.",
+  "security.eyebrow": "Key security",
+  "security.title": "How we protect your keys and access.",
+  "security.subtitle": "For owners abroad, trust starts with clear access rules. We keep the process simple, documented and controlled.",
+  "security.card1.title": "Coded keys",
+  "security.card1.text": "Keys are coded internally and are never labelled with the property address.",
+  "security.card2.title": "Written approval",
+  "security.card2.text": "We access the property only for approved visits, checks or agreed services.",
+  "security.card3.title": "Visit log",
+  "security.card3.text": "Each visit is recorded with date, reason and short notes.",
+  "security.card4.title": "Photo confirmation",
+  "security.card4.text": "You receive photos and a status update after each scheduled check.",
+  "report.text": "After each scheduled home check, we send photos and a short status summary so you know what was checked and whether anything needs attention.",
+  "report.cardTitle": "Home check report",
+  "report.cardSubtitle": "Playa San Juan · Scheduled visit",
+  "report.item1": "Entrance door and lock",
+  "report.item3": "Humidity / smell / ventilation",
+  "report.item5": "Water and electricity visual check",
+  "report.item6": "Mailbox / terrace if accessible",
+  "report.note": "Notes: No visible issues. Apartment aired for 20 minutes. Photos attached.",
+  "prices.eyebrow": "Care plans",
+  "prices.title": "Simple plans for owners who are away.",
+  "prices.subtitle": "Prices are starting points for scheduled route-day service. Extra visits, urgent access, third-party invoices and unusual access conditions are confirmed separately.",
+  "prices.key.title": "Key Safe",
+  "prices.key.text": "Secure key holding for owners who need trusted local access.",
+  "prices.key.li1": "coded key custody",
+  "prices.key.li2": "access by approval only",
+  "prices.key.li3": "visits charged separately",
+  "prices.monthly.title": "Essential Care",
+  "prices.monthly.text": "Key holding and one scheduled home check per month.",
+  "prices.monthly.li1": "12 checks per year",
+  "prices.monthly.li2": "photo report after each visit",
+  "prices.monthly.li3": "preferred extra visit rate",
+  "prices.comfort.title": "Comfort Care",
+  "prices.comfort.text": "Key holding and two scheduled home checks per month.",
+  "prices.comfort.li1": "24 checks per year",
+  "prices.comfort.li2": "better for humid or closed homes",
+  "prices.comfort.li3": "photo reports included",
+  "prices.premium.title": "Premium Care",
+  "prices.premium.text": "Key holding and weekly scheduled checks for higher peace of mind.",
+  "prices.premium.li1": "around 4 checks per month",
+  "prices.premium.li2": "priority scheduling",
+  "prices.premium.li3": "ideal for longer absences",
+  "prices.check.title": "One-time Home Check",
+  "prices.check.text": "A single inside check with photos and a short status report.",
+  "prices.tech.title": "Technician Access",
+  "prices.tech.text": "We open the property for an approved technician, delivery or maintenance visit.",
+  "prices.tech.li1": "first hour included",
+  "prices.tech.li2": "waiting time charged separately",
+  "prices.tech.li3": "visit confirmation sent after",
+  "calc.title": "Calculate your care plan",
+  "calc.subtitle": "Choose your area, property type and check frequency to get an indicative yearly service fee.",
+  "calc.arrivalbox.title": "6. Arrival add-ons and report",
+  "calc.arrivalbox.warning": "Arrival Box requires authorised access to the property. We do not leave groceries outside the door.",
+  "faq.q1": "How are my keys protected?",
+  "faq.a1": "Keys are coded internally and are not labelled with your address. Access is only for agreed services and every visit is documented.",
+  "faq.q2": "What does a home check include?",
+  "faq.a2": "A visual check of doors, windows, visible leaks, water, electricity, humidity/smell, balcony or terrace if accessible, and a photo report after the visit.",
+  "faq.q3": "Do you manage tourist rentals?",
+  "faq.a3": "Not at this stage. We focus on property care, key holding, scheduled home checks, arrival preparation and coordination services.",
+  "faq.q4": "Can you open for a technician or delivery?",
+  "faq.a4": "Yes, when authorised by the owner. Waiting time and urgent visits are charged separately.",
+  "faq.q5": "Can Arrival Box be done without keys?",
+  "faq.a5": "No. Groceries are placed inside only when Luma has authorised access through key holding, key collection, concierge/neighbour or another approved arrangement.",
+  "contact.eyebrow": "Request property care",
+  "contact.title": "Tell us where your property is and what level of care you need.",
+  "contact.text": "Use the form to send a WhatsApp or email request. We will confirm access, key handover, service area and the final quote before any visit.",
+  "form.email": "Email",
+  "form.phone": "Phone / WhatsApp",
+  "form.country": "Country of residence",
+  "form.property": "Property type",
+  "form.keys": "Keys / access",
+  "form.emailSubmit": "Send email request",
+  "form.note": "Before publishing, replace the WhatsApp number and contact email in script.js.",
+  "footer.text": "Property care, secure key holding and scheduled home checks in Alicante.",
+  "arrival.access.title": "Apartment access required",
+  "arrival.access.text": "We place groceries inside the property only. We do not leave food or household items outside the door, in corridors or in common areas.",
+  "arrivalPage.eyebrow": "Arrival Box add-on",
+  "arrivalPage.title": "Groceries and essentials placed inside before you arrive.",
+  "arrivalPage.subtitle": "Arrival Box is an add-on for owners who already have authorised access arranged with Luma: key holding, key collection, concierge, neighbour or property manager.",
+  "arrivalPage.primary": "Build Arrival Box",
+  "arrivalPage.secondary": "Arrange access first",
+  "arrivalPage.cardTitle": "Important",
+  "arrivalPage.item1.title": "Inside only",
+  "arrivalPage.item1.text": "We do not leave groceries outside doors or in corridors.",
+  "arrivalPage.item2.title": "Access required",
+  "arrivalPage.item2.text": "Luma needs authorised access before shopping and placement.",
+  "arrivalPage.item3.title": "Receipt separate",
+  "arrivalPage.item3.text": "Products are charged at supermarket receipt price.",
+  "arrivalPage.levels.eyebrow": "Arrival Box levels",
+  "arrivalPage.levels.title": "Choose the level that matches your arrival.",
+  "arrivalPage.basic.title": "Basic Arrival Box",
+  "arrivalPage.basic.text": "Water, breakfast basics, coffee, fruit and simple household essentials.",
+  "arrivalPage.family.title": "Family Arrival Box",
+  "arrivalPage.family.text": "More water, breakfast, snacks, kids-friendly items and essentials for late arrivals.",
+  "arrivalPage.long.title": "Long-Stay Starter",
+  "arrivalPage.long.text": "Food basics plus household starter items such as detergent, dishwasher tablets and paper goods.",
+  "arrivalPage.cta.eyebrow": "Need access first?",
+  "arrivalPage.cta.title": "Arrival Box works best with key holding.",
+  "arrivalPage.cta.text": "Most owners arrange key holding first. Then Luma can check the home, turn on the fridge and place groceries inside before arrival.",
+  "arrivalPage.cta.button": "Arrange key holding"
+});
+
+Object.assign(translations.es, {
+  "nav.security": "Seguridad de llaves",
+  "hero.eyebrow": "Alicante · Costa Blanca · Propietarios fuera",
+  "hero.title": "Cuidado de vivienda y custodia de llaves en Alicante para propietarios que viven fuera.",
+  "hero.subtitle": "Guardamos tus llaves de forma segura, revisamos tu vivienda de manera programada y enviamos informes con fotos mientras estás fuera.",
+  "hero.primary": "Pedir presupuesto de custodia",
+  "hero.secondary": "Calcular plan de cuidado",
+  "hero.trust1.title": "Custodia segura",
+  "hero.trust1.text": "llaves codificadas, sin dirección",
+  "hero.trust2.title": "Revisiones programadas",
+  "hero.trust2.text": "1, 2 o 4 veces al mes",
+  "hero.trust3.title": "Informes con fotos",
+  "hero.trust3.text": "después de cada visita",
+  "hero.cardTitle": "Lo más solicitado",
+  "hero.item1.title": "Custodia de llaves",
+  "hero.item1.text": "acceso local seguro para revisiones, técnicos y preparación de llegada.",
+  "hero.item2.title": "Revisiones mensuales",
+  "hero.item2.text": "ventanas, puertas, fugas, agua, electricidad, humedad e informe con fotos.",
+  "hero.item3.title": "Acceso para técnicos",
+  "hero.item3.text": "abrimos la vivienda para reparaciones, entregas o mantenimiento autorizado.",
+  "hero.cardCta": "Solicitar cuidado de vivienda",
+  "problem.eyebrow": "Para propietarios que viven fuera",
+  "problem.title": "Tu vivienda necesita un contacto local de confianza, no solo limpieza.",
+  "problem.text": "Cuando estás fuera de España, pequeños problemas pueden volverse caros: fugas, humedad, ventanas bloqueadas, llaves perdidas, problemas de suministros o visitas de técnicos perdidas. Luma ofrece acceso local autorizado, revisiones programadas e informes documentados.",
+  "pain.keys.title": "Llaves gestionadas con seguridad",
+  "pain.keys.text": "Las llaves se codifican, no llevan la dirección, y el acceso solo se realiza con autorización.",
+  "pain.checks.title": "Visibilidad regular",
+  "pain.checks.text": "Elige 1, 2 o 4 revisiones al mes para que la vivienda no quede sin revisar durante largos periodos.",
+  "pain.proof.title": "Prueba tras cada visita",
+  "pain.proof.text": "Cada visita se documenta con fotos, notas y un breve resumen de estado.",
+  "services.title": "Cuidado de vivienda basado en llaves, revisiones y pruebas.",
+  "services.subtitle": "Empieza con custodia segura de llaves y revisiones programadas. Añade preparación de llegada, acceso para técnicos o Arrival Box cuando lo necesites.",
+  "services.key.title": "Custodia segura de llaves",
+  "services.key.text": "Llaves codificadas, acceso solo con autorización escrita y registro claro de visitas.",
+  "services.check.title": "Revisiones programadas",
+  "services.check.text": "Revisiones mensuales, quincenales o semanales con fotos y breve informe de estado.",
+  "services.maintenance.title": "Acceso para técnicos y entregas",
+  "services.maintenance.text": "Abrimos la vivienda para técnicos, entregas o mantenimiento autorizado.",
+  "services.prepare.title": "Preparación de llegada",
+  "services.prepare.text": "Antes de tu llegada, podemos ventilar, encender la nevera y revisar suministros básicos.",
+  "services.arrival.title": "Arrival Box extra",
+  "services.arrival.text": "Compra y básicos colocados dentro antes de la llegada cuando Luma tiene acceso autorizado.",
+  "services.arrival.link": "Ver página de Arrival Box",
+  "services.cleaning.text": "Coordinamos con colaboradores de limpieza y podemos revisar el resultado después.",
+  "security.eyebrow": "Seguridad de llaves",
+  "security.title": "Cómo protegemos tus llaves y el acceso.",
+  "security.subtitle": "Para propietarios que viven fuera, la confianza empieza con reglas claras de acceso. Mantenemos el proceso simple, documentado y controlado.",
+  "security.card1.title": "Llaves codificadas",
+  "security.card1.text": "Las llaves se codifican internamente y nunca se etiquetan con la dirección.",
+  "security.card2.title": "Autorización escrita",
+  "security.card2.text": "Accedemos a la vivienda solo para visitas, revisiones o servicios acordados.",
+  "security.card3.title": "Registro de visitas",
+  "security.card3.text": "Cada visita se registra con fecha, motivo y notas breves.",
+  "security.card4.title": "Confirmación con fotos",
+  "security.card4.text": "Recibes fotos y actualización de estado después de cada revisión programada.",
+  "report.text": "Después de cada revisión programada, enviamos fotos y un breve resumen para que sepas qué se ha revisado y si algo requiere atención.",
+  "report.cardTitle": "Informe de revisión",
+  "report.cardSubtitle": "Playa San Juan · Visita programada",
+  "report.item1": "Puerta de entrada y cerradura",
+  "report.item3": "Humedad / olor / ventilación",
+  "report.item5": "Revisión visual de agua y electricidad",
+  "report.item6": "Buzón / terraza si es accesible",
+  "report.note": "Notas: Sin incidencias visibles. Vivienda ventilada durante 20 minutos. Fotos adjuntas.",
+  "prices.eyebrow": "Planes de cuidado",
+  "prices.title": "Planes simples para propietarios ausentes.",
+  "prices.subtitle": "Los precios son puntos de partida para servicio programado en días de ruta. Visitas extra, urgencias, facturas de terceros y accesos especiales se confirman aparte.",
+  "prices.key.title": "Key Safe",
+  "prices.key.text": "Custodia segura de llaves para propietarios que necesitan acceso local de confianza.",
+  "prices.key.li1": "custodia de llaves codificadas",
+  "prices.key.li2": "acceso solo con autorización",
+  "prices.key.li3": "visitas se cobran aparte",
+  "prices.monthly.title": "Essential Care",
+  "prices.monthly.text": "Custodia de llaves y una revisión programada al mes.",
+  "prices.monthly.li1": "12 revisiones al año",
+  "prices.monthly.li2": "informe con fotos tras cada visita",
+  "prices.monthly.li3": "tarifa preferente para visitas extra",
+  "prices.comfort.title": "Comfort Care",
+  "prices.comfort.text": "Custodia de llaves y dos revisiones programadas al mes.",
+  "prices.comfort.li1": "24 revisiones al año",
+  "prices.comfort.li2": "mejor para viviendas cerradas o con humedad",
+  "prices.comfort.li3": "informes con fotos incluidos",
+  "prices.premium.title": "Premium Care",
+  "prices.premium.text": "Custodia de llaves y revisiones semanales para mayor tranquilidad.",
+  "prices.premium.li1": "aprox. 4 revisiones al mes",
+  "prices.premium.li2": "programación prioritaria",
+  "prices.premium.li3": "ideal para ausencias largas",
+  "prices.check.title": "Revisión puntual",
+  "prices.check.text": "Una revisión interior con fotos y breve informe de estado.",
+  "prices.tech.title": "Acceso para técnico",
+  "prices.tech.text": "Abrimos la vivienda para técnico, entrega o visita de mantenimiento autorizada.",
+  "prices.tech.li1": "primera hora incluida",
+  "prices.tech.li2": "tiempo de espera se cobra aparte",
+  "prices.tech.li3": "confirmación de visita enviada después",
+  "calc.title": "Calcula tu plan de cuidado",
+  "calc.subtitle": "Elige zona, tipo de vivienda y frecuencia de revisión para obtener una tarifa anual orientativa.",
+  "calc.arrivalbox.title": "6. Extras de llegada e informe",
+  "calc.arrivalbox.warning": "Arrival Box requiere acceso autorizado a la vivienda. No dejamos compras fuera de la puerta.",
+  "faq.q1": "¿Cómo protegéis mis llaves?",
+  "faq.a1": "Las llaves se codifican internamente y no llevan la dirección. El acceso solo se realiza para servicios acordados y cada visita queda documentada.",
+  "faq.q2": "¿Qué incluye una revisión de vivienda?",
+  "faq.a2": "Revisión visual de puertas, ventanas, fugas visibles, agua, electricidad, humedad/olor, balcón o terraza si es accesible, e informe con fotos tras la visita.",
+  "faq.q3": "¿Gestionáis alquiler turístico?",
+  "faq.a3": "No en esta etapa. Nos centramos en cuidado de vivienda, custodia de llaves, revisiones programadas, preparación de llegada y coordinación.",
+  "faq.q4": "¿Podéis abrir para un técnico o entrega?",
+  "faq.a4": "Sí, con autorización del propietario. El tiempo de espera y visitas urgentes se cobran aparte.",
+  "faq.q5": "¿Se puede hacer Arrival Box sin llaves?",
+  "faq.a5": "No. La compra se coloca dentro solo cuando Luma tiene acceso autorizado mediante custodia de llaves, recogida de llaves, conserje/vecino u otro acuerdo aprobado.",
+  "contact.eyebrow": "Solicitar cuidado de vivienda",
+  "contact.title": "Dinos dónde está tu vivienda y qué nivel de cuidado necesitas.",
+  "contact.text": "Usa el formulario para enviar una solicitud por WhatsApp o email. Confirmaremos acceso, entrega de llaves, zona de servicio y presupuesto final antes de cualquier visita.",
+  "form.email": "Email",
+  "form.phone": "Teléfono / WhatsApp",
+  "form.country": "País de residencia",
+  "form.property": "Tipo de vivienda",
+  "form.keys": "Llaves / acceso",
+  "form.emailSubmit": "Enviar solicitud por email",
+  "form.note": "Antes de publicar, reemplaza el número de WhatsApp y el email de contacto en script.js.",
+  "footer.text": "Cuidado de vivienda, custodia segura de llaves y revisiones programadas en Alicante.",
+  "arrival.access.title": "Acceso a vivienda requerido",
+  "arrival.access.text": "Colocamos las compras solo dentro de la vivienda. No dejamos comida ni artículos en la puerta, pasillos o zonas comunes.",
+  "arrivalPage.eyebrow": "Arrival Box extra",
+  "arrivalPage.title": "Compra y básicos colocados dentro antes de tu llegada.",
+  "arrivalPage.subtitle": "Arrival Box es un extra para propietarios que ya tienen acceso autorizado con Luma: custodia de llaves, recogida de llaves, conserje, vecino o gestor.",
+  "arrivalPage.primary": "Crear Arrival Box",
+  "arrivalPage.secondary": "Organizar acceso primero",
+  "arrivalPage.cardTitle": "Importante",
+  "arrivalPage.item1.title": "Solo dentro",
+  "arrivalPage.item1.text": "No dejamos compras fuera de puertas ni en pasillos.",
+  "arrivalPage.item2.title": "Acceso requerido",
+  "arrivalPage.item2.text": "Luma necesita acceso autorizado antes de comprar y colocar productos.",
+  "arrivalPage.item3.title": "Ticket aparte",
+  "arrivalPage.item3.text": "Los productos se cobran según ticket de supermercado.",
+  "arrivalPage.levels.eyebrow": "Niveles de Arrival Box",
+  "arrivalPage.levels.title": "Elige el nivel que encaja con tu llegada.",
+  "arrivalPage.basic.title": "Basic Arrival Box",
+  "arrivalPage.basic.text": "Agua, básicos de desayuno, café, fruta y artículos domésticos simples.",
+  "arrivalPage.family.title": "Family Arrival Box",
+  "arrivalPage.family.text": "Más agua, desayuno, snacks, productos para niños y básicos para llegadas tarde.",
+  "arrivalPage.long.title": "Long-Stay Starter",
+  "arrivalPage.long.text": "Básicos de comida y hogar como detergente, pastillas de lavavajillas y papel.",
+  "arrivalPage.cta.eyebrow": "¿Necesitas acceso primero?",
+  "arrivalPage.cta.title": "Arrival Box funciona mejor con custodia de llaves.",
+  "arrivalPage.cta.text": "La mayoría de propietarios organiza primero la custodia. Así Luma puede revisar la vivienda, encender la nevera y colocar compras dentro antes de la llegada.",
+  "arrivalPage.cta.button": "Organizar custodia de llaves"
+});
+
 
 const items = {
   drinks: [
@@ -627,6 +947,9 @@ function updateSummary(){
   const selected = selectedItems();
   const list = document.getElementById("selectedList");
   const count = document.getElementById("selectedCount");
+  const wa = document.getElementById("whatsappBuilder");
+  if(!list || !count || !wa) return;
+
   count.textContent = selected.length;
   list.innerHTML = "";
   const visible = selected.slice(0, 12);
@@ -640,7 +963,6 @@ function updateSummary(){
     li.textContent = `+${selected.length - 12} more`;
     list.appendChild(li);
   }
-  const wa = document.getElementById("whatsappBuilder");
   wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(requestText())}`;
 }
 
@@ -651,7 +973,7 @@ function initLang(){
       localStorage.setItem("fc_lang", currentLang);
       renderTranslations();
       renderItems();
-      setPreset(document.querySelector(".preset.active")?.dataset.preset || "basic");
+      if(document.querySelector(".preset")) setPreset(document.querySelector(".preset.active")?.dataset.preset || "basic");
       updateSummary();
       updateCalculator();
     });
@@ -665,45 +987,70 @@ function initPresets(){
 }
 
 function initCopy(){
-  document.getElementById("copyRequest").addEventListener("click", async () => {
+  const copyBtn = document.getElementById("copyRequest");
+  if(!copyBtn) return;
+  copyBtn.addEventListener("click", async () => {
     try{
       await navigator.clipboard.writeText(requestText());
-      const btn = document.getElementById("copyRequest");
-      const old = btn.textContent;
-      btn.textContent = currentLang === "es" ? "Copiado" : "Copied";
-      setTimeout(() => btn.textContent = t("summary.copy"), 1600);
+      const old = copyBtn.textContent;
+      copyBtn.textContent = currentLang === "es" ? "Copiado" : "Copied";
+      setTimeout(() => copyBtn.textContent = t("summary.copy"), 1600);
     }catch(e){
       alert(requestText());
     }
   });
 }
 
-function initLeadForm(){
-  const form = document.getElementById("leadForm");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const area = document.getElementById("area").value.trim();
-    const date = document.getElementById("arrivalDate").value;
-    const service = document.getElementById("service").value;
-    const message = document.getElementById("message").value.trim();
+function leadRequestText(){
+  const name = document.getElementById("name")?.value.trim();
+  const email = document.getElementById("email")?.value.trim();
+  const phone = document.getElementById("phone")?.value.trim();
+  const country = document.getElementById("country")?.value.trim();
+  const area = document.getElementById("area")?.value.trim();
+  const propertyType = document.getElementById("propertyType")?.value;
+  const keysAccess = document.getElementById("keysAccess")?.value;
+  const service = document.getElementById("service")?.value;
+  const message = document.getElementById("message")?.value.trim();
 
-    const text = [
-      "Hello! I would like to request Luma Alicante service.",
-      name ? `Name: ${name}` : "",
-      area ? `Area: ${area}` : "",
-      date ? `Arrival date: ${date}` : "",
-      service ? `Service: ${service}` : "",
-      message ? `Message: ${message}` : "",
-      "",
-      "Please contact me to confirm details and quote."
-    ].filter(Boolean).join("\n");
+  const intro = currentLang === "es"
+    ? "Hola. Me gustaría solicitar un servicio de Luma Alicante."
+    : "Hello! I would like to request Luma Alicante property care.";
 
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
-  });
+  return [
+    intro,
+    "",
+    name ? `Name: ${name}` : "",
+    email ? `Email: ${email}` : "",
+    phone ? `Phone / WhatsApp: ${phone}` : "",
+    country ? `Country of residence: ${country}` : "",
+    area ? `Property location: ${area}` : "",
+    propertyType ? `Property type: ${propertyType}` : "",
+    keysAccess ? `Keys / access: ${keysAccess}` : "",
+    service ? `Service needed: ${service}` : "",
+    message ? `Message: ${message}` : "",
+    "",
+    "Please contact me to confirm access, service area and final quote."
+  ].filter(Boolean).join("\n");
 }
 
+function initLeadForm(){
+  const form = document.getElementById("leadForm");
+  if(!form) return;
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(leadRequestText())}`, "_blank");
+  });
+
+  const emailBtn = document.getElementById("emailRequest");
+  if(emailBtn){
+    emailBtn.addEventListener("click", () => {
+      const subject = encodeURIComponent("Luma Alicante property care request");
+      const body = encodeURIComponent(leadRequestText());
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  }
+}
 
 function calcSelectedText(selectEl){
   if(!selectEl) return "";
@@ -721,8 +1068,9 @@ function calcLabelForSelect(selectId, text, value){
   const labels = {
     calcArea: currentLang === "es" ? "Zona especial" : "Other area",
     calcTown: currentLang === "es" ? "Suplemento de zona" : "Area surcharge",
+    calcFrequency: currentLang === "es" ? "Plan de revisiones" : "Home check plan",
     calcKeys: currentLang === "es" ? "Llaves / acceso" : "Keys / access",
-    calcProperty: currentLang === "es" ? "Tamaño de vivienda" : "Property size",
+    calcProperty: currentLang === "es" ? "Tipo de vivienda" : "Property type",
     calcTiming: currentLang === "es" ? "Horario" : "Timing",
     calcWaiting: currentLang === "es" ? "Tiempo de espera" : "Waiting time",
     calcArrivalBox: currentLang === "es" ? "Arrival Box" : "Arrival Box",
@@ -768,7 +1116,7 @@ function calculatorData(){
     });
   }
 
-  ["calcArea", "calcTown", "calcKeys", "calcProperty", "calcTiming", "calcWaiting", "calcArrivalBox", "calcReport"].forEach(id => {
+  ["calcArea", "calcTown", "calcFrequency", "calcKeys", "calcProperty", "calcTiming", "calcWaiting", "calcArrivalBox", "calcReport"].forEach(id => {
     serviceFee += addSelectLine(lines, id);
   });
 
@@ -790,6 +1138,7 @@ function calculatorRequestText(){
   const data = calculatorData();
   const area = calcSelectedText(document.getElementById("calcArea"));
   const town = calcSelectedText(document.getElementById("calcTown"));
+  const frequency = calcSelectedText(document.getElementById("calcFrequency"));
   const keys = calcSelectedText(document.getElementById("calcKeys"));
   const timing = calcSelectedText(document.getElementById("calcTiming"));
   const property = calcSelectedText(document.getElementById("calcProperty"));
@@ -808,7 +1157,7 @@ function calculatorRequestText(){
 
   const totalLine = `Service fee estimate: ${money(data.serviceFee)}${groceryLine ? `\nService + grocery budget: ${money(data.serviceFee + data.groceryValue)}` : ""}`;
 
-  return `${intro}\n\nArea: ${area}\nTown / urbanisation: ${town}\nKeys/access: ${keys}\nTiming: ${timing}\nProperty size: ${property}\n\nSelected services:\n${selected}\n\n${totalLine}\n\nPlease contact me to confirm address, access, timing and final quote.`;
+  return `${intro}\n\nArea: ${area}\nTown / urbanisation: ${town}\nHome check plan: ${frequency}\nKeys/access: ${keys}\nTiming: ${timing}\nProperty type: ${property}\n\nSelected services:\n${selected}\n\n${totalLine}\n\nPlease contact me to confirm address, access, timing and final quote.`;
 }
 
 function updateCalculator(){
@@ -863,6 +1212,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCopy();
   initLeadForm();
   initCalculator();
-  setPreset("basic");
+  if(document.querySelector(".preset")) setPreset("basic");
   updateCalculator();
 });

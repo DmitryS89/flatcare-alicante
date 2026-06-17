@@ -183,3 +183,33 @@ Calculator bug fix:
 - Fixed JavaScript syntax error in WhatsApp estimate text generation.
 - Calculator now initializes and updates service fee, grocery total and selected items correctly.
 - Added an extra calculator refresh after default Arrival Box preset setup.
+
+
+## Version 13 updates
+
+Calculator and pricing logic updated:
+- Removed Pre-arrival Check from one-off services
+- Renamed Full Arrival Ready to Arrival Ready Setup
+- Added optional ongoing home check plans:
+  - 1 check/month — €399/year
+  - 2 checks/month — €649/year
+  - 4 checks/month — €999/year
+- Changed property field to property type:
+  - Apartment / flat
+  - Townhouse
+  - House / villa
+  - Large or complex property — by quote
+
+
+## Version 14 updates
+
+Trust-first repositioning:
+- Homepage focus changed to key holding, scheduled home checks and photo reports
+- Arrival Box moved to a separate page: arrival-box.html
+- Added Key Security section
+- Added serious care plan pricing: Key Safe, Essential, Comfort, Premium
+- Updated calculator copy for care plans
+- Added Arrival Box access warning
+- Rebuilt contact form with email, phone, country, property type, keys/access and service fields
+- Added two request options: WhatsApp request and email request (mailto)
+- Added defensive JavaScript so pages without Arrival Box builder do not break
