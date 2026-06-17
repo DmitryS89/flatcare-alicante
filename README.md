@@ -224,3 +224,9 @@ Trust-first repositioning:
 ## Version 16 updates
 - Replaced remaining emoji icons in the problem / pain cards section
 - Added unified pain-card icon styling
+
+
+## Version 17 updates
+- Fixed misaligned icon block in problem cards
+- Replaced remaining window emoji with custom icon
+- Removed tiny text/caption remnants under icon PNGs
