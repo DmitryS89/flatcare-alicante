@@ -213,3 +213,9 @@ Trust-first repositioning:
 - Rebuilt contact form with email, phone, country, property type, keys/access and service fields
 - Added two request options: WhatsApp request and email request (mailto)
 - Added defensive JavaScript so pages without Arrival Box builder do not break
+
+
+## Version 15 updates
+- Replaced website emojis with a unified custom icon system
+- Added exported PNG icons under assets/icons/
+- Updated card styles to render custom icons consistently

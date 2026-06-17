@@ -256,7 +256,20 @@ h3{
   min-height:210px;
 }
 .card p{color:var(--muted);margin-bottom:0}
-.card-icon{font-size:28px;display:block;margin-bottom:18px}
+.card-icon{
+  width:72px;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 0 18px;
+}
+.card-icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
 
 .builder-layout{
   display:grid;
