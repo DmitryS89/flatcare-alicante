@@ -219,3 +219,8 @@ Trust-first repositioning:
 - Replaced website emojis with a unified custom icon system
 - Added exported PNG icons under assets/icons/
 - Updated card styles to render custom icons consistently
+
+
+## Version 16 updates
+- Replaced remaining emoji icons in the problem / pain cards section
+- Added unified pain-card icon styling

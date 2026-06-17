@@ -1451,3 +1451,20 @@ textarea::placeholder{
     grid-template-columns:1fr;
   }
 }
+
+
+/* Unified icons for problem / pain cards */
+.pain-list .pain-icon{
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 0 18px;
+}
+.pain-list .pain-icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
