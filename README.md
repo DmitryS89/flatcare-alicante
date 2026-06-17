@@ -235,3 +235,10 @@ Trust-first repositioning:
 ## Version 18 updates
 - Removed blue rounded backgrounds behind pain-section icons
 - Unified all site icons to a plain, clean style without background tiles
+
+
+## Version 19 updates
+- Added selected Luma premium logo system
+- Replaced website mark, header mark and favicon with new L + arc + wave identity
+- Added horizontal and stacked logo SVGs
+- Added OG brand image SVG

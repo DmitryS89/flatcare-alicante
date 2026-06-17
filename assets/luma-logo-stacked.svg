@@ -1,13 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" role="img" aria-label="Luma Alicante">
-  <g transform="translate(260,0)">
-    <circle cx="58" cy="31" r="8.2" fill="#DFA550"/>
-    <path d="M60 124 V73 C60 42 120 42 120 73 V124" fill="none" stroke="#145C55" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M89 68 L112 79 V126 L89 116 Z" fill="#0E403B" stroke="#0E403B" stroke-width="1.1" stroke-linejoin="round"/>
-    <path d="M96 95 V103" stroke="#DFA550" stroke-width="3.1" stroke-linecap="round"/>
-    <path d="M77 128 H105M71 136 H113M65 144 H121M57 152 H130" stroke="#DFA550" stroke-width="1.9" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title">
+  <title>Luma Alicante stacked logo</title>
+  <rect width="760" height="520" fill="none"/>
+  <g transform="translate(252 20)">
+    
+  <path d="M72 58 C77 58 81 58 86 58 C81 64 80 71 80 84 L80 150 C80 171 87 181 106 181 L128 181 C149 181 164 173 180 158 C176 174 170 188 164 200 L62 200 C70 191 72 182 72 165 L72 84 C72 70 70 64 64 58 Z" fill="#145C55"/>
+  <path d="M57 194 C89 171 123 173 157 186 C177 194 199 194 222 176 C204 207 173 216 142 201 C111 186 83 184 57 204 Z" fill="#145C55"/>
+  <path d="M60 208 C92 191 124 193 156 204 C179 212 199 207 220 190" fill="none" stroke="#145C55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M64 54 C83 15 137 17 170 45 C194 65 209 95 207 125" fill="none" stroke="#DFA550" stroke-width="8" stroke-linecap="round"/>
+  <path d="M199 103 L206 118 L221 125 L206 132 L199 147 L192 132 L177 125 L192 118 Z" fill="#DFA550"/>
+
   </g>
-  <text x="350" y="300" text-anchor="middle" fill="#145C55" font-family="Georgia, 'Times New Roman', serif" font-size="138" letter-spacing="8">Luma</text>
-  <line x1="145" y1="365" x2="235" y2="365" stroke="#DFA550" stroke-width="2"/>
-  <text x="350" y="383" text-anchor="middle" fill="#DFA550" font-family="Manrope, Arial, sans-serif" font-size="33" font-weight="600" letter-spacing="24">ALICANTE</text>
-  <line x1="465" y1="365" x2="555" y2="365" stroke="#DFA550" stroke-width="2"/>
+  <text x="380" y="338" text-anchor="middle" fill="#145C55" font-family="Georgia, 'Times New Roman', serif" font-size="112" letter-spacing="20">Luma</text>
+  <line x1="188" y1="381" x2="274" y2="381" stroke="#DFA550" stroke-width="3"/>
+  <text x="380" y="395" text-anchor="middle" fill="#DFA550" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="19">ALICANTE</text>
+  <line x1="486" y1="381" x2="572" y2="381" stroke="#DFA550" stroke-width="3"/>
+  <text x="380" y="458" text-anchor="middle" fill="#145C55" font-family="Manrope, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="7">PROPERTY CARE • KEY HOLDING • HOME CHECKS</text>
 </svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FAF6EE"/>
+  <circle cx="1010" cy="120" r="220" fill="#DFA550" opacity=".10"/>
+  <circle cx="160" cy="560" r="220" fill="#145C55" opacity=".06"/>
+  <g transform="translate(470 70)">
+    
+  <path d="M72 58 C77 58 81 58 86 58 C81 64 80 71 80 84 L80 150 C80 171 87 181 106 181 L128 181 C149 181 164 173 180 158 C176 174 170 188 164 200 L62 200 C70 191 72 182 72 165 L72 84 C72 70 70 64 64 58 Z" fill="#145C55"/>
+  <path d="M57 194 C89 171 123 173 157 186 C177 194 199 194 222 176 C204 207 173 216 142 201 C111 186 83 184 57 204 Z" fill="#145C55"/>
+  <path d="M60 208 C92 191 124 193 156 204 C179 212 199 207 220 190" fill="none" stroke="#145C55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M64 54 C83 15 137 17 170 45 C194 65 209 95 207 125" fill="none" stroke="#DFA550" stroke-width="8" stroke-linecap="round"/>
+  <path d="M199 103 L206 118 L221 125 L206 132 L199 147 L192 132 L177 125 L192 118 Z" fill="#DFA550"/>
+
+  </g>
+  <text x="600" y="385" text-anchor="middle" fill="#145C55" font-family="Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="17">Luma</text>
+  <text x="600" y="442" text-anchor="middle" fill="#DFA550" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="18">ALICANTE</text>
+  <text x="600" y="510" text-anchor="middle" fill="#145C55" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">PROPERTY CARE • KEY HOLDING • HOME CHECKS</text>
+</svg>

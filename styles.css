@@ -1468,3 +1468,20 @@ textarea::placeholder{
 .pain-item .pain-icon img{width:100%;height:100%;object-fit:contain;display:block;}
 .pain-item > span:not(.pain-icon){background:transparent !important;border-radius:0 !important;}
 .cards .card-icon,.pain-item .pain-icon{filter:none;}
+
+
+/* v11 selected Luma logo system */
+.brand-mark-logo {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+.brand-mark-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+.brand-footer .brand-mark-logo img {
+  width: 48px;
+  height: 48px;
+}

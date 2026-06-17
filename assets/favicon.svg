@@ -1,13 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Luma Alicante">
-  <rect width="180" height="180" rx="38" fill="#0E403B"/>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="58" cy="31" r="8.2" fill="#DFA550" stroke="none"/>
-    <path d="M60 124 V73 C60 42 120 42 120 73 V124" stroke="#FAF6EE" stroke-width="5.2"/>
-    <path d="M89 68 L112 79 V126 L89 116 Z" fill="#FAF6EE" stroke="#FAF6EE" stroke-width="1.1"/>
-    <path d="M96 95 V103" stroke="#DFA550" stroke-width="3.1"/>
-    <path d="M77 128 H105" stroke="#DFA550" stroke-width="1.9"/>
-    <path d="M71 136 H113" stroke="#DFA550" stroke-width="1.9"/>
-    <path d="M65 144 H121" stroke="#DFA550" stroke-width="1.9"/>
-    <path d="M57 152 H130" stroke="#DFA550" stroke-width="1.9"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect x="12" y="12" width="232" height="232" rx="54" fill="#145C55"/>
+  <path d="M74 58 C79 58 84 58 89 58 C84 64 83 72 83 86 L83 147 C83 168 91 178 110 178 L130 178 C150 178 165 171 181 157 C178 171 172 184 166 196 L64 196 C72 187 74 178 74 162 L74 86 C74 71 72 64 66 58 Z" fill="#FFFFFF"/>
+  <path d="M58 192 C89 171 122 173 156 186 C178 194 199 193 221 176 C203 207 174 214 143 201 C112 187 84 184 58 203 Z" fill="#FFFFFF"/>
+  <path d="M61 207 C94 191 125 193 156 203 C179 211 200 207 220 190" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <path d="M62 52 C83 16 137 18 170 45 C194 65 209 95 207 124" fill="none" stroke="#DFA550" stroke-width="8" stroke-linecap="round"/>
+  <path d="M200 103 L206 118 L221 125 L206 132 L200 147 L193 132 L178 125 L193 118 Z" fill="#DFA550"/>
 </svg>
