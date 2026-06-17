@@ -230,3 +230,8 @@ Trust-first repositioning:
 - Fixed misaligned icon block in problem cards
 - Replaced remaining window emoji with custom icon
 - Removed tiny text/caption remnants under icon PNGs
+
+
+## Version 18 updates
+- Removed blue rounded backgrounds behind pain-section icons
+- Unified all site icons to a plain, clean style without background tiles

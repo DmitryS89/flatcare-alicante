@@ -584,7 +584,7 @@ input:focus,select:focus,textarea:focus{
 .audience-card{background:linear-gradient(180deg,#fff,rgba(255,255,255,.78))}
 .pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .pain-item{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px}
-.pain-item .pain-icon{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:16px;background:rgba(31,111,97,.10);margin-bottom:16px;overflow:hidden}
+.pain-item .pain-icon{display:flex;align-items:center;justify-content:flex-start;width:64px;height:64px;margin:0 0 18px;overflow:hidden;background:transparent;border-radius:0}
 .pain-item .pain-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .pain-item p{color:var(--muted);margin-bottom:0}
 .report-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:center}
@@ -1455,23 +1455,16 @@ textarea::placeholder{
 
 
 /* Unified icons for problem / pain cards */
-.pain-list .pain-icon{
-  width:64px;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:0 0 18px;
-}
-.pain-list .pain-icon img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
 
 
 /* v9 icon alignment fixes */
 .card-icon{width:64px;height:64px;overflow:hidden}
 .card-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .security-grid .card-icon,.cards .card-icon{margin-bottom:16px}
+
+
+/* v10 unified icon style: no blue square background */
+.pain-item .pain-icon{display:flex !important;align-items:center;justify-content:flex-start;width:64px;height:64px;margin:0 0 18px;overflow:hidden;background:transparent !important;border-radius:0 !important;box-shadow:none !important;}
+.pain-item .pain-icon img{width:100%;height:100%;object-fit:contain;display:block;}
+.pain-item > span:not(.pain-icon){background:transparent !important;border-radius:0 !important;}
+.cards .card-icon,.pain-item .pain-icon{filter:none;}
