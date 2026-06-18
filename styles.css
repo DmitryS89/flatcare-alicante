@@ -1583,3 +1583,53 @@ textarea::placeholder{
     height: 38px !important;
   }
 }
+
+/* === HEADER LOGO SIZE BOOST === */
+.brand-mark-logo {
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+}
+
+.brand-mark-logo img {
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.brand {
+  gap: 14px !important;
+  align-items: center !important;
+}
+
+.brand-name {
+  line-height: 1 !important;
+}
+
+.site-header,
+.header,
+header {
+  min-height: 88px !important;
+}
+
+@media (max-width: 768px) {
+  .brand-mark-logo {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+  }
+
+  .brand-mark-logo img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
