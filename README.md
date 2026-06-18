@@ -254,3 +254,8 @@ Trust-first repositioning:
   - `luma-logo-badge.png`
   - `luma-mark-header.png`
   - `favicon.png`
+
+
+## Version 20 updates
+- Fixed header logo cropping by rebuilding `assets/luma-mark-header.png` from the approved Option A logo board.
+- Added transparent square canvas around the selected mark so it fits correctly in the header.
