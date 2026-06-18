@@ -1633,3 +1633,39 @@ header {
     height: 52px !important;
   }
 }
+
+/* === FOOTER LOGO SIZE FIX === */
+.footer .brand-mark-logo {
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.footer .brand-mark-logo img {
+  width: 56px !important;
+  height: 56px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.footer .brand-footer {
+  gap: 14px !important;
+  align-items: center !important;
+}
+
+@media (max-width: 768px) {
+  .footer .brand-mark-logo,
+  .footer .brand-mark-logo img {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+  }
+}
