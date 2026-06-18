@@ -266,3 +266,10 @@ Trust-first repositioning:
 - Removed the tiny internal logo text from the header mark.
 - Changed asset filename to `luma-mark-header-clean.png` to avoid browser image cache.
 - Added `favicon-clean.png`.
+
+
+## Version 22 updates
+- Replaced header identity with the selected horizontal Luma Alicante logo.
+- Removed the separate plain text "Luma Alicante" from the header brand lockup.
+- Footer now uses the same horizontal logo system.
+- Favicon remains the high-contrast app icon version.
