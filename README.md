@@ -259,3 +259,10 @@ Trust-first repositioning:
 ## Version 20 updates
 - Fixed header logo cropping by rebuilding `assets/luma-mark-header.png` from the approved Option A logo board.
 - Added transparent square canvas around the selected mark so it fits correctly in the header.
+
+
+## Version 21 updates
+- Header now uses a clean mark only: L + arc + wave + star.
+- Removed the tiny internal logo text from the header mark.
+- Changed asset filename to `luma-mark-header-clean.png` to avoid browser image cache.
+- Added `favicon-clean.png`.

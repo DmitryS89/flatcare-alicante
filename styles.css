@@ -1546,3 +1546,40 @@ textarea::placeholder{
     height: 46px !important;
   }
 }
+
+
+/* v14 clean header mark — icon only, no internal text */
+.brand-mark-logo {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.brand-mark-logo img {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.brand-footer .brand-mark-logo,
+.brand-footer .brand-mark-logo img {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+@media (max-width: 640px) {
+  .brand-mark-logo,
+  .brand-mark-logo img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
