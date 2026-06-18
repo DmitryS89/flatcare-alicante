@@ -242,3 +242,15 @@ Trust-first repositioning:
 - Replaced website mark, header mark and favicon with new L + arc + wave identity
 - Added horizontal and stacked logo SVGs
 - Added OG brand image SVG
+
+
+## Logo update — selected Option A
+- Header mark now uses the exact selected Option A logo crop from the approved brand board.
+- Favicon now uses the approved app icon crop from the same board.
+- Added PNG logo assets in `assets/`:
+  - `luma-logo-primary.png`
+  - `luma-logo-horizontal.png`
+  - `luma-logo-stacked.png`
+  - `luma-logo-badge.png`
+  - `luma-mark-header.png`
+  - `favicon.png`
